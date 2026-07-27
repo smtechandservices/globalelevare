@@ -91,19 +91,18 @@ export type Emirate = {
 
 export const emirates: Emirate[] = [
   {
-    key: "sharjah",
-    n: "03",
-    name: "Sharjah",
-    from: "5,750",
-    lon: 55.58,
-    lat: 25.3,
+    key: "abudhabi",
+    n: "01",
+    name: "Abu Dhabi",
+    from: "15,500",
+    lon: 54.05,
+    lat: 23.9,
     blurb:
-      "The value route. Cheapest credible licences in the country and a 40-minute drive to Dubai clients.",
+      "Capital, sovereign money and the financial centre. Slower filings, heavier standing.",
     zones: [
-      { name: "SHAMS", kind: "Free zone", price: "AED 5,750", note: "0 visa · 1 activity · digital licence" },
-      { name: "SPC Free Zone", kind: "Free zone", price: "AED 6,500", note: "1 visa eligible · dual licence option" },
-      { name: "Hamriyah", kind: "Free zone", price: "AED 8,900", note: "industrial & trading, warehousing" },
-      { name: "Sharjah mainland", kind: "Mainland", price: "AED 14,500", note: "SEDD licence · unlimited visas" },
+      { name: "ADGM", kind: "Free zone", price: "AED 22,500", note: "financial services · common law" },
+      { name: "KEZAD", kind: "Free zone", price: "AED 15,500", note: "logistics & manufacturing" },
+      { name: "Abu Dhabi mainland", kind: "Mainland", price: "AED 19,500", note: "ADDED licence · tenders" },
     ],
   },
   {
@@ -120,6 +119,22 @@ export const emirates: Emirate[] = [
       { name: "Meydan", kind: "Free zone", price: "AED 12,500", note: "strong bank introductions" },
       { name: "DMCC", kind: "Free zone", price: "AED 34,000", note: "flexi-desk · premium standing" },
       { name: "Dubai mainland", kind: "Mainland", price: "AED 18,500", note: "DED licence · government tenders" },
+    ],
+  },
+  {
+    key: "sharjah",
+    n: "03",
+    name: "Sharjah",
+    from: "5,750",
+    lon: 55.58,
+    lat: 25.3,
+    blurb:
+      "The value route. Cheapest credible licences in the country and a 40-minute drive to Dubai clients.",
+    zones: [
+      { name: "SHAMS", kind: "Free zone", price: "AED 5,750", note: "0 visa · 1 activity · digital licence" },
+      { name: "SPC Free Zone", kind: "Free zone", price: "AED 6,500", note: "1 visa eligible · dual licence option" },
+      { name: "Hamriyah", kind: "Free zone", price: "AED 8,900", note: "industrial & trading, warehousing" },
+      { name: "Sharjah mainland", kind: "Mainland", price: "AED 14,500", note: "SEDD licence · unlimited visas" },
     ],
   },
   {
@@ -179,21 +194,6 @@ export const emirates: Emirate[] = [
       { name: "Fujairah Free Zone", kind: "Free zone", price: "AED 10,500", note: "port access · trading" },
     ],
   },
-  {
-    key: "abudhabi",
-    n: "01",
-    name: "Abu Dhabi",
-    from: "15,500",
-    lon: 54.05,
-    lat: 23.9,
-    blurb:
-      "Capital, sovereign money and the financial centre. Slower filings, heavier standing.",
-    zones: [
-      { name: "ADGM", kind: "Free zone", price: "AED 22,500", note: "financial services · common law" },
-      { name: "KEZAD", kind: "Free zone", price: "AED 15,500", note: "logistics & manufacturing" },
-      { name: "Abu Dhabi mainland", kind: "Mainland", price: "AED 19,500", note: "ADDED licence · tenders" },
-    ],
-  },
 ];
 
 export const partners = [
@@ -215,7 +215,7 @@ export const why = [
   {
     n: "01",
     title: "One advisor, start to finish",
-    body: "The person who quotes you files your documents and answers your WhatsApp in year three. No handover desk.",
+    body: "The person who quotes you files your documents and answers your texts on consistent. No handover desk.",
   },
   {
     n: "02",
