@@ -1,4 +1,5 @@
 import SocialLinks from "./SocialLinks";
+import { emirates, resourceLinks, serviceLinks } from "@/lib/content";
 
 const currentYear = 2026;
 
@@ -23,40 +24,26 @@ export default function Footer() {
         </div>
         <div>
           <div className="text-[11px] tracking-[0.24em] uppercase text-dark-tint-2 mb-2.5">
-            Formation
+            Services
           </div>
           <div className="flex flex-col gap-1.5 text-sm text-dark-tint-4">
-            <a href="#services" className="transition-colors hover:text-brand-teal">
-              Mainland company
-            </a>
-            <a href="#services" className="transition-colors hover:text-brand-teal">
-              Free zone company
-            </a>
-            <a href="#services" className="transition-colors hover:text-brand-teal">
-              Offshore company
-            </a>
-            <a href="#services" className="transition-colors hover:text-brand-teal">
-              Branch office
-            </a>
+            {serviceLinks.map((s) => (
+              <a key={s.title} href={s.href} className="transition-colors hover:text-brand-teal">
+                {s.title}
+              </a>
+            ))}
           </div>
         </div>
         <div>
           <div className="text-[11px] tracking-[0.24em] uppercase text-dark-tint-2 mb-2.5">
-            Services
+            Free Zones
           </div>
           <div className="flex flex-col gap-1.5 text-sm text-dark-tint-4">
-            <a href="#services" className="transition-colors hover:text-brand-teal">
-              Visas &amp; immigration
-            </a>
-            <a href="#services" className="transition-colors hover:text-brand-teal">
-              PRO services
-            </a>
-            <a href="#services" className="transition-colors hover:text-brand-teal">
-              Banking
-            </a>
-            <a href="#services" className="transition-colors hover:text-brand-teal">
-              Accounting &amp; VAT
-            </a>
+            {emirates.map((em) => (
+              <a key={em.key} href="#jurisdictions" className="transition-colors hover:text-brand-teal">
+                {em.name}
+              </a>
+            ))}
           </div>
         </div>
         <div>
@@ -67,11 +54,16 @@ export default function Footer() {
             <a href="#about" className="transition-colors hover:text-brand-teal">
               About
             </a>
-            <a href="#resources" className="transition-colors hover:text-brand-teal">
-              Resources
-            </a>
+            {resourceLinks.map((r) => (
+              <a key={r.title} href={r.href} className="transition-colors hover:text-brand-teal">
+                {r.title}
+              </a>
+            ))}
             <a href="#consult" className="transition-colors hover:text-brand-teal">
               Contact
+            </a>
+            <a href="/" className="transition-colors hover:text-brand-teal">
+              Terms
             </a>
           </div>
         </div>

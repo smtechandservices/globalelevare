@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Barlow, Barlow_Condensed } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import WhatsAppFloater from "@/components/WhatsAppFloater";
+import CookieConsent from "@/components/CookieConsent";
 import "./globals.css";
 
 const barlow = Barlow({
@@ -75,6 +76,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-[#f2f2f3] text-[#1d1f20] font-sans antialiased">
         {children}
         <WhatsAppFloater />
+        <CookieConsent />
         <Analytics />
       </body>
     </html>
