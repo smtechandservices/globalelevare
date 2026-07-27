@@ -1,3 +1,4 @@
+import Image from "next/image";
 import CornerMarks from "./CornerMarks";
 import { posts } from "@/lib/content";
 
@@ -20,15 +21,17 @@ export default function Resources() {
           <a
             key={b.title}
             href="#"
-            className="relative block border border-[#1d1f20]/15 p-1.5 transition-colors hover:border-accent"
+            className="group relative block border border-[#1d1f20]/15 p-1.5 transition-colors hover:border-accent"
           >
-            <div
-              className="h-32 bg-placeholder"
-              style={{
-                backgroundImage:
-                  "repeating-linear-gradient(90deg, rgba(60,53,110,0.22) 0 1px, transparent 1px 8px)",
-              }}
-            />
+            <div className="relative h-32 overflow-hidden bg-placeholder">
+              <Image
+                src={b.image}
+                alt={b.title}
+                fill
+                sizes="(min-width: 768px) 33vw, 100vw"
+                className="object-cover grayscale-[15%] transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
             <div className="px-2.5 pt-3.5 pb-1.5">
               <div className="text-[11px] tracking-[0.16em] uppercase text-accent-strong tabular-nums">
                 {b.meta}

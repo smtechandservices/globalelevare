@@ -75,9 +75,9 @@ export async function renderOgImage() {
                 color: "#f5f5f8",
               }}
             >
-              <span style={{ display: "flex" }}>Your UAE company,</span>
-              <span style={{ display: "flex" }}>engineered</span>
-              <span style={{ display: "flex", color: "#5fd0e0" }}>not improvised.</span>
+              <span style={{ display: "flex" }}>Elevare,</span>
+              <span style={{ display: "flex" }}>Defining</span>
+              <span style={{ display: "flex", color: "#5fd0e0" }}>Global Excellence.</span>
             </div>
             <div
               style={{

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description:
-      "Your UAE company, engineered, not improvised. Fixed quotes, one advisor, 15 years in the Emirates.",
+      "Elevare, Defining Global Excellence. Fixed quotes, one advisor, 15 years in the Emirates.",
     siteName: "Elevare Global",
     url: "/",
     type: "website",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description:
-      "Your UAE company, engineered, not improvised. Fixed quotes, one advisor, 15 years in the Emirates.",
+      "Elevare, Defining Global Excellence. Fixed quotes, one advisor, 15 years in the Emirates.",
   },
   robots: {
     index: true,

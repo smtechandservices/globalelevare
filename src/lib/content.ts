@@ -301,23 +301,38 @@ export const quotes = [
   {
     text: "I had three quotes. Elevare was the only one that talked me out of the expensive free zone I had already decided on, and explained why. Licence in four days.",
     who: "Priya N. — e-commerce, IFZA Dubai",
+    avatar: "/images/avatar-priya.jpg",
   },
   {
     text: "They handled my investor visa, my wife's, and the school paperwork nobody warned me about. I signed things; they queued.",
     who: "Marcus L. — consultancy, SHAMS Sharjah",
+    avatar: "/images/avatar-marcus.jpg",
   },
   {
     text: "Two banks declined us before Elevare took over the file. Account opened in eleven days with the same documents, presented properly.",
     who: "Ahmed R. — trading, DMCC",
+    avatar: "/images/avatar-ahmed.jpg",
   },
 ];
 
 export const authorities = ["SEDD Sharjah", "Dubai DET", "IFZA", "RAKEZ", "DMCC", "GDRFA"];
 
 export const posts = [
-  { meta: "Tax · 6 min read", title: "UAE corporate tax at 9%: what a free-zone company actually pays" },
-  { meta: "Formation · 8 min read", title: "Mainland or free zone in 2026: the ownership rules moved again" },
-  { meta: "Banking · 5 min read", title: "What UAE bank compliance really asks a new company for" },
+  {
+    meta: "Tax · 6 min read",
+    title: "UAE corporate tax at 9%: what a free-zone company actually pays",
+    image: "/images/resource-tax.jpg",
+  },
+  {
+    meta: "Formation · 8 min read",
+    title: "Mainland or free zone in 2026: the ownership rules moved again",
+    image: "/images/resource-formation.jpg",
+  },
+  {
+    meta: "Banking · 5 min read",
+    title: "What UAE bank compliance really asks a new company for",
+    image: "/images/resource-banking.jpg",
+  },
 ];
 
 export const nav = [
