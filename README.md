@@ -1,0 +1,2 @@
+# globalelevare
+Defining Global Excellence
