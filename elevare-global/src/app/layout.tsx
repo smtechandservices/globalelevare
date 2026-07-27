@@ -1,0 +1,71 @@
+import type { Metadata } from "next";
+import { Barlow, Barlow_Condensed } from "next/font/google";
+import WhatsAppFloater from "@/components/WhatsAppFloater";
+import "./globals.css";
+
+const barlow = Barlow({
+  variable: "--font-barlow",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const barlowCondensed = Barlow_Condensed({
+  variable: "--font-barlow-condensed",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const title = "Elevare Global | UAE Company Formation & Business Setup";
+const description =
+  "Mainland, free zone or offshore company formation in the UAE. Fixed quotes, one advisor from first call through licence, visas and bank account. 15 years in the Emirates.";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://globalelevare.com"),
+  title,
+  description,
+  keywords: [
+    "UAE company formation",
+    "business setup UAE",
+    "free zone licence",
+    "Sharjah business setup",
+    "Dubai mainland licence",
+    "offshore company UAE",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title,
+    description:
+      "Your UAE company, engineered, not improvised. Fixed quotes, one advisor, 15 years in the Emirates.",
+    siteName: "Elevare Global",
+    url: "/",
+    type: "website",
+    locale: "en_AE",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description:
+      "Your UAE company, engineered, not improvised. Fixed quotes, one advisor, 15 years in the Emirates.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={`${barlow.variable} ${barlowCondensed.variable} h-full`}>
+      <body className="min-h-full flex flex-col bg-[#f2f2f3] text-[#1d1f20] font-sans antialiased">
+        {children}
+        <WhatsAppFloater />
+      </body>
+    </html>
+  );
+}
