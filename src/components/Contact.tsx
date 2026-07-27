@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import CornerMarks from "./CornerMarks";
+import SocialLinks from "./SocialLinks";
 import { site } from "@/lib/content";
 
 export default function Contact() {
@@ -43,29 +44,32 @@ export default function Contact() {
         <div className="grid grid-cols-1 sm:grid-cols-2 tabular-nums">
           <a
             href={site.waLink}
-            className="border-t border-l border-[#1d1f20]/15 p-5 transition-colors hover:bg-accent-tint"
+            className="border-b border-l border-[#1d1f20]/15 p-5 transition-colors hover:bg-accent-tint"
           >
             <div className="text-[11px] tracking-[0.16em] uppercase text-[#7a7a7d]">WhatsApp</div>
             <div className="font-condensed text-2xl">{site.whatsappDisplay}</div>
           </a>
           <a
             href={site.telLink}
-            className="border-t border-l border-[#1d1f20]/15 p-5 transition-colors hover:bg-accent-tint"
+            className="border-b border-l border-[#1d1f20]/15 p-5 transition-colors hover:bg-accent-tint"
           >
             <div className="text-[11px] tracking-[0.16em] uppercase text-[#7a7a7d]">Call</div>
             <div className="font-condensed text-2xl">{site.whatsappDisplay}</div>
           </a>
           <a
             href={site.mailLink}
-            className="border-t border-l border-[#1d1f20]/15 p-5 transition-colors hover:bg-accent-tint"
+            className="border-b border-l border-[#1d1f20]/15 p-5 transition-colors hover:bg-accent-tint"
           >
             <div className="text-[11px] tracking-[0.16em] uppercase text-[#7a7a7d]">Email</div>
             <div className="font-condensed text-2xl break-all">{site.email}</div>
           </a>
-          <div className="border-t border-l border-[#1d1f20]/15 p-5">
+          <div className="border-b border-l border-[#1d1f20]/15 p-5">
             <div className="text-[11px] tracking-[0.16em] uppercase text-[#7a7a7d]">Office</div>
             <div className="font-condensed text-2xl">{site.office}</div>
           </div>
+        </div>
+        <div className="flex items-center gap-3.5 mt-2">
+          <SocialLinks variant="light" />
         </div>
       </div>
 

@@ -1,3 +1,5 @@
+import SocialLinks from "./SocialLinks";
+
 const currentYear = 2026;
 
 export default function Footer() {
@@ -15,6 +17,9 @@ export default function Footer() {
             Business setup and corporate services, Sharjah, serving founders in 45 countries
             since 2011.
           </p>
+          <div className="mt-3.5">
+            <SocialLinks variant="dark" />
+          </div>
         </div>
         <div>
           <div className="text-[11px] tracking-[0.24em] uppercase text-dark-tint-2 mb-2.5">
@@ -68,21 +73,13 @@ export default function Footer() {
             <a href="#consult" className="transition-colors hover:text-brand-teal">
               Contact
             </a>
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noreferrer"
-              className="transition-colors hover:text-brand-teal"
-            >
-              LinkedIn · Instagram
-            </a>
           </div>
         </div>
       </div>
       <div className="flex flex-col sm:flex-row justify-between gap-3 pt-3.5 text-[11px] text-dark-tint-2 tabular-nums">
         <span>
-          © {currentYear} Elevare Global Business Setup Services LLC · Sharjah Economic
-          Development Dept. licence no. 000000
+          © {currentYear} Elevare Global · Business Setup Services · Sharjah Economic
+          Development Dept.
         </span>
         <span>Prices are indicative and exclude government fee changes · Privacy · Terms</span>
       </div>

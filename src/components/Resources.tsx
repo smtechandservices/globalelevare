@@ -5,7 +5,7 @@ import { posts } from "@/lib/content";
 export default function Resources() {
   return (
     <div id="resources" className="px-5 md:px-[60px] pt-14 pb-10 scroll-mt-20">
-      <div className="flex justify-between items-baseline border-b border-[#1d1f20]/15 pb-3.5 mb-7">
+      <div className="flex justify-between items-baseline gap-4 flex-wrap border-b border-[#1d1f20]/15 pb-3.5 mb-7">
         <h2 className="font-condensed font-semibold text-4xl md:text-[46px] uppercase leading-none m-0">
           Technical notes
         </h2>

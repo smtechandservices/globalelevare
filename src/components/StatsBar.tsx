@@ -6,7 +6,7 @@ export default function StatsBar() {
       {stats.map((s) => (
         <div
           key={s.label}
-          className="px-5 md:px-7 py-7 border-l border-[#f5f5f8]/15 tabular-nums first:border-l-0"
+          className="px-5 md:px-7 py-7 border-[#f5f5f8]/15 tabular-nums md:border-l md:first:border-l-0"
         >
           <div className="font-condensed font-semibold text-4xl md:text-[52px] leading-none text-dark-tint-1">
             {s.n}

@@ -10,6 +10,11 @@ export const site = {
   mailLink: "mailto:info@globalelevare.com",
 };
 
+export const socials = [
+  { name: "LinkedIn", href: "https://www.linkedin.com", icon: "linkedin" },
+  { name: "Instagram", href: "https://www.instagram.com", icon: "instagram" },
+];
+
 export const stats = [
   { n: "500+", label: "Global clients" },
   { n: "45+", label: "Countries served" },
@@ -365,4 +370,10 @@ export const serviceLinks: { title: string; tag: string; icon: string; href: str
   { title: "Visa & PRO Services", tag: "Residency solutions", icon: "visa", href: "#services" },
   { title: "License & Permits", tag: "Compliance & renewals", icon: "license", href: "#services" },
   { title: "Corporate Banking", tag: "Financial infrastructure", icon: "banking", href: "#services" },
+];
+
+export const resourceLinks: { title: string; tag: string; icon: string; href: string }[] = [
+  { title: "Blogs", tag: "Technical notes & guides", icon: "blog", href: "#resources" },
+  { title: "Events", tag: "Webinars & workshops", icon: "events", href: "#resources" },
+  { title: "Careers", tag: "Join the team", icon: "careers", href: "#resources" },
 ];
