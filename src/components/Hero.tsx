@@ -4,7 +4,7 @@ import { site } from "@/lib/content";
 
 export default function Hero() {
   return (
-    <div className="blueprint-grid grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 px-5 md:px-[60px] pt-10 md:pt-14 pb-8">
+    <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 px-5 md:px-[60px] pt-10 md:pt-14 pb-8">
       <div>
         <div className="text-xs tracking-[0.24em] uppercase text-accent-strong tabular-nums mb-5">
           Rev. 2026 · UAE company formation · Est. 2011
@@ -47,7 +47,7 @@ export default function Hero() {
             className="object-cover"
           />
           <span className="relative font-mono text-[11px] tracking-[0.06em] text-dark bg-[#f2f2f3] px-2 py-1">
-            FIG. 01 — advisor + client, Sharjah office
+            advisor + client, Sharjah office
           </span>
         </div>
         <CornerMarks inset={6} />

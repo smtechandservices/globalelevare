@@ -4,7 +4,7 @@ import { ImageResponse } from "next/og";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Elevare Global — UAE Company Formation & Business Setup";
+export const alt = "Elevare Global | UAE Company Formation & Business Setup";
 
 const barlowCondensedSemiBold = readFileSync(
   join(process.cwd(), "src/app/fonts/BarlowCondensed-SemiBold.ttf")

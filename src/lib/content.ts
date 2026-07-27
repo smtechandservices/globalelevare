@@ -27,19 +27,19 @@ export const services = [
   {
     n: "02",
     title: "Free zone formation",
-    body: "Forty-plus zones compared against your activity, visa count and renewal budget — not against our commission.",
+    body: "Forty-plus zones compared against your activity, visa count and renewal budget not against our commission.",
     price: "From AED 5,750",
   },
   {
     n: "03",
     title: "Offshore formation",
-    body: "RAK ICC and JAFZA offshore for holding structures, asset protection and shareholding — no visas, no office.",
+    body: "RAK ICC and JAFZA offshore for holding structures, asset protection and shareholding no visas, no office.",
     price: "From AED 9,750",
   },
   {
     n: "04",
     title: "Visas & immigration",
-    body: "Investor, partner, employee and family residence visas. Medical, Emirates ID, biometrics — escorted, not explained.",
+    body: "Investor, partner, employee and family residence visas. Medical, Emirates ID, biometrics escorted, not explained.",
     price: "From AED 3,900 per visa",
   },
   {
@@ -125,7 +125,7 @@ export const emirates: Emirate[] = [
     lon: 55.47,
     lat: 25.41,
     blurb:
-      "Small, fast and forgiving on documents — a common first licence for solo founders.",
+      "Small, fast and forgiving on documents a common first licence for solo founders.",
     zones: [
       { name: "Ajman Free Zone", kind: "Free zone", price: "AED 8,500", note: "1 visa · trading & services" },
       { name: "Ajman Media City", kind: "Free zone", price: "AED 6,900", note: "0 visa · media & consultancy" },
@@ -191,6 +191,21 @@ export const emirates: Emirate[] = [
   },
 ];
 
+export const partners = [
+  "Meridian Trading Co.",
+  "Nova Consultants",
+  "Zenith Logistics",
+  "Solstice Capital",
+  "Vantage Digital",
+  "Arcadia Holdings",
+  "Beacon Maritime",
+  "Lumen Analytics",
+  "Crestline Ventures",
+  "Halcyon Foods",
+  "Northbridge Media",
+  "Amberfield Group",
+];
+
 export const why = [
   {
     n: "01",
@@ -200,7 +215,7 @@ export const why = [
   {
     n: "02",
     title: "Fixed quotes, itemised",
-    body: 'Government fee, zone fee, our fee — listed separately. No "administration charges" appearing at signature.',
+    body: 'Government fee, zone fee, our fee listed separately. No "administration charges" appearing at signature.',
   },
   {
     n: "03",
@@ -215,7 +230,7 @@ export const why = [
   {
     n: "05",
     title: "We stay after the licence",
-    body: "Renewal calendar, visa expiries, corporate tax deadlines — tracked on our side and flagged before they cost you.",
+    body: "Renewal calendar, visa expiries, corporate tax deadlines tracked on our side and flagged before they cost you.",
   },
 ];
 
@@ -229,7 +244,7 @@ export const steps = [
   {
     n: "02",
     title: "Jurisdiction plan",
-    body: "Two or three costed options side by side, in writing, with the trade-offs stated.",
+    body: "Two / three costed options parallelly, in writing, with the trade-offs stated.",
     when: "Day 1",
   },
   {
@@ -340,5 +355,14 @@ export const nav = [
   { label: "Free Zones", href: "#jurisdictions" },
   { label: "About", href: "#about" },
   { label: "Resources", href: "#resources" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "#consult" },
+];
+
+export const serviceLinks: { title: string; tag: string; icon: string; href: string }[] = [
+  { title: "Mainland Formation", tag: "Direct local trade access", icon: "mainland", href: "#services" },
+  { title: "Free Zone Setup", tag: "100% tax benefits", icon: "freezone", href: "#services" },
+  { title: "Offshore Incorporation", tag: "Asset protection", icon: "offshore", href: "#services" },
+  { title: "Visa & PRO Services", tag: "Residency solutions", icon: "visa", href: "#services" },
+  { title: "License & Permits", tag: "Compliance & renewals", icon: "license", href: "#services" },
+  { title: "Corporate Banking", tag: "Financial infrastructure", icon: "banking", href: "#services" },
 ];

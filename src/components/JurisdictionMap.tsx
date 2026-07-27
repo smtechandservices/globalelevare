@@ -12,7 +12,7 @@ export default function JurisdictionMap() {
 
   return (
     <div id="jurisdictions" className="px-5 md:px-[60px] pt-10 pb-14 scroll-mt-20">
-      <SectionHeading title="Site plan — pick a jurisdiction" sheet="Sheet 02 / 7 emirates · 40+ zones" />
+      <SectionHeading title="Site plan, pick a jurisdiction" sheet="Sheet 02 / 7 emirates · 40+ zones" />
       <p className="max-w-[72ch] text-[#424244] mb-7">
         The jurisdiction decides your visa quota, your banking odds and your renewal bill. Select a
         region to see the zones we file in and what they start at.

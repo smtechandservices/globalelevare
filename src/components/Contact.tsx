@@ -38,7 +38,7 @@ export default function Contact() {
         </h2>
         <p className="max-w-[52ch] text-[#424244] mb-7">
           Tell us the activity, the ownership and how many visas you need. You leave the call
-          knowing jurisdiction, total cost and timeline — whether or not you engage us.
+          knowing jurisdiction, total cost and timeline whether or not you engage us.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 tabular-nums">
           <a
@@ -130,7 +130,7 @@ export default function Contact() {
             </p>
           )}
           <p className="m-0 text-[11px] text-[#98989b]">
-            We reply within one working hour, Sunday to Thursday.
+            We reply within one working hour, Monday to Saturday.
           </p>
         </form>
         <CornerMarks inset={6} />

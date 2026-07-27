@@ -4,6 +4,7 @@ import StatsBar from "@/components/StatsBar";
 import Services from "@/components/Services";
 import JurisdictionMap from "@/components/JurisdictionMap";
 import Tolerances from "@/components/Tolerances";
+import PartnersMarquee from "@/components/PartnersMarquee";
 import Process from "@/components/Process";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
@@ -21,6 +22,7 @@ export default function Home() {
         <Services />
         <JurisdictionMap />
         <Tolerances />
+        <PartnersMarquee />
         <Pricing />
         <Process />
         <Testimonials />

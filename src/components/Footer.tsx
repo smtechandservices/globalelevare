@@ -12,7 +12,7 @@ export default function Footer() {
             Defining Global Excellence
           </div>
           <p className="mt-3.5 text-sm text-dark-tint-3 max-w-[36ch]">
-            Business setup and corporate services, Sharjah — serving founders in 45 countries
+            Business setup and corporate services, Sharjah, serving founders in 45 countries
             since 2011.
           </p>
         </div>

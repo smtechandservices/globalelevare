@@ -13,7 +13,7 @@ export default function Tolerances() {
           we hold
         </h2>
         <p className="text-[#424244]">
-          Formation is the easy half. What breaks a young company is the second year — a lapsed
+          Formation is the easy half. What breaks a young company is the second year, a lapsed
           establishment card, a missed corporate tax registration, a visa renewal nobody flagged.
         </p>
       </div>

@@ -15,8 +15,8 @@ export default function Testimonials() {
               key={q.who}
               className="relative border border-[#1d1f20]/15 p-5 transition-colors hover:border-accent"
             >
-              <div className="font-condensed text-6xl leading-none text-accent/70 mb-1.5">&ldquo;</div>
-              <p className="text-[#1d1f20] mb-5">{q.text}</p>
+              <div className="font-condensed text-5xl leading-none text-accent/70 -mb-5">&ldquo;</div>
+              <p className="text-[#1d1f20] ms-2 mb-5">{q.text}</p>
               <div className="flex items-center justify-between gap-2.5 border-t border-[#1d1f20]/15 pt-3.5">
                 <div className="flex items-center gap-2.5">
                   <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full">
