@@ -8,7 +8,7 @@ export default function Faq() {
 
   return (
     <div className="bg-[linear-gradient(180deg,var(--color-bg-soft),#fff)] px-5 py-20 md:px-10 md:py-28">
-      <div className="mx-auto max-w-[1320px]">
+      <div className="mx-auto">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="lg:sticky lg:top-[110px] lg:self-start">
             <span className="eyebrow mb-3 block">Frequently asked</span>

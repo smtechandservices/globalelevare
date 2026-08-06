@@ -6,8 +6,8 @@ const currentYear = 2026;
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-soft px-5 pt-10 md:px-10">
-      <div className="relative mx-auto max-w-[1320px] overflow-hidden rounded-tr-[64px] px-7 pt-14 sm:rounded-tr-[80px] md:px-12 md:pt-16">
+    <footer className="bg-bg-soft pt-10">
+      <div className="relative isolate mx-auto overflow-hidden rounded-tr-[64px] px-7 pt-14 sm:rounded-tr-[80px] md:px-12 md:pt-16">
         <div
           className="absolute inset-0 -z-10"
           style={{

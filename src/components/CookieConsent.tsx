@@ -2,9 +2,12 @@
 
 import { useEffect, useState } from "react";
 
-const STORAGE_KEY = "cookie-consent";
+export const COOKIE_STORAGE_KEY = "cookie-consent";
+const STORAGE_KEY = COOKIE_STORAGE_KEY;
 
 const TRANSITION_MS = 300;
+
+export const COOKIE_BANNER_EVENT = "cookie-banner-visibility";
 
 export default function CookieConsent() {
   const [mounted, setMounted] = useState(false);
@@ -17,6 +20,7 @@ export default function CookieConsent() {
       // (SSR has no window) — this isn't state derived from props/other state.
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setMounted(true);
+      window.dispatchEvent(new CustomEvent(COOKIE_BANNER_EVENT, { detail: { visible: true } }));
     }
   }, []);
 
@@ -30,6 +34,7 @@ export default function CookieConsent() {
     setShown(false);
     window.setTimeout(() => setMounted(false), TRANSITION_MS);
     window.localStorage.setItem(STORAGE_KEY, value);
+    window.dispatchEvent(new CustomEvent(COOKIE_BANNER_EVENT, { detail: { visible: false } }));
   }
 
   function acceptAll() {

@@ -28,12 +28,12 @@ export default function Contact() {
   return (
     <div
       id="consult"
-      className="relative isolate overflow-hidden px-5 py-20 md:px-10 md:py-28 scroll-mt-20"
+      className="relative isolate overflow-hidden px-5 md:px-10 scroll-mt-20"
       style={{ background: "linear-gradient(180deg,#fff,var(--color-bg-soft))" }}
     >
       <div className="glow-blob -right-40 top-0 h-[440px] w-[440px] bg-accent/12" />
 
-      <div className="relative mx-auto grid max-w-[1320px] grid-cols-1 gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
+      <div className="relative mx-auto grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
         <div>
           <span className="eyebrow mb-3 block">Talk to an advisor</span>
           <h2 className="mb-4 text-[32px] font-extrabold leading-[1.1] sm:text-[40px] lg:text-[48px]">
@@ -88,7 +88,7 @@ export default function Contact() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Your name"
-                  className="w-full box-border rounded-[var(--r-sm)] border border-line bg-bg-soft px-3.5 py-3 text-[15px] text-navy outline-none transition-colors focus:border-accent focus:bg-white focus:shadow-[0_0_0_3px_#c11f1f1f]"
+                  className="w-full box-border rounded-[var(--r-sm)] border border-line bg-bg-soft px-3.5 py-3 text-[15px] text-navy outline-none transition-colors focus:border-accent focus:bg-white focus:shadow-[0_0_0_3px_#4f7fe01f]"
                 />
               </label>
               <label className="block">
@@ -100,7 +100,7 @@ export default function Contact() {
                   value={whatsapp}
                   onChange={(e) => setWhatsapp(e.target.value)}
                   placeholder="+971 …"
-                  className="w-full box-border rounded-[var(--r-sm)] border border-line bg-bg-soft px-3.5 py-3 text-[15px] text-navy outline-none transition-colors focus:border-accent focus:bg-white focus:shadow-[0_0_0_3px_#c11f1f1f]"
+                  className="w-full box-border rounded-[var(--r-sm)] border border-line bg-bg-soft px-3.5 py-3 text-[15px] text-navy outline-none transition-colors focus:border-accent focus:bg-white focus:shadow-[0_0_0_3px_#4f7fe01f]"
                 />
               </label>
             </div>
@@ -112,7 +112,7 @@ export default function Contact() {
                 value={activity}
                 onChange={(e) => setActivity(e.target.value)}
                 placeholder="e.g. e-commerce, consultancy, trading"
-                className="w-full box-border rounded-[var(--r-sm)] border border-line bg-bg-soft px-3.5 py-3 text-[15px] text-navy outline-none transition-colors focus:border-accent focus:bg-white focus:shadow-[0_0_0_3px_#c11f1f1f]"
+                className="w-full box-border rounded-[var(--r-sm)] border border-line bg-bg-soft px-3.5 py-3 text-[15px] text-navy outline-none transition-colors focus:border-accent focus:bg-white focus:shadow-[0_0_0_3px_#4f7fe01f]"
               />
             </label>
             <label className="block">
@@ -123,7 +123,7 @@ export default function Contact() {
                 value={visas}
                 onChange={(e) => setVisas(e.target.value)}
                 placeholder="0, 1, 2 …"
-                className="w-full box-border rounded-[var(--r-sm)] border border-line bg-bg-soft px-3.5 py-3 text-[15px] text-navy outline-none transition-colors focus:border-accent focus:bg-white focus:shadow-[0_0_0_3px_#c11f1f1f]"
+                className="w-full box-border rounded-[var(--r-sm)] border border-line bg-bg-soft px-3.5 py-3 text-[15px] text-navy outline-none transition-colors focus:border-accent focus:bg-white focus:shadow-[0_0_0_3px_#4f7fe01f]"
               />
             </label>
             <button type="submit" className="btn btn-accent mt-1">

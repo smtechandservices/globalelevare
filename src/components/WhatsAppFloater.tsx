@@ -2,9 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 import { site } from "@/lib/content";
+import { COOKIE_BANNER_EVENT, COOKIE_STORAGE_KEY } from "./CookieConsent";
+import { MOBILE_DRAWER_EVENT } from "./Header";
 
 export default function WhatsAppFloater() {
   const [open, setOpen] = useState(false);
+  const [cookieBannerVisible, setCookieBannerVisible] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -16,8 +20,36 @@ export default function WhatsAppFloater() {
     return () => document.removeEventListener("mousedown", handleClick);
   }, [open]);
 
+  useEffect(() => {
+    // The cookie banner and this floater both anchor to the bottom-right corner;
+    // shift up while the banner is visible so they never overlap.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setCookieBannerVisible(!window.localStorage.getItem(COOKIE_STORAGE_KEY));
+    function handleVisibility(e: Event) {
+      const { visible } = (e as CustomEvent<{ visible: boolean }>).detail;
+      setCookieBannerVisible(visible);
+    }
+    window.addEventListener(COOKIE_BANNER_EVENT, handleVisibility);
+    return () => window.removeEventListener(COOKIE_BANNER_EVENT, handleVisibility);
+  }, []);
+
+  useEffect(() => {
+    // Sit behind the mobile drawer (z-50) while it's open, instead of floating on top of it.
+    function handleDrawer(e: Event) {
+      const { open: drawerIsOpen } = (e as CustomEvent<{ open: boolean }>).detail;
+      setDrawerOpen(drawerIsOpen);
+    }
+    window.addEventListener(MOBILE_DRAWER_EVENT, handleDrawer);
+    return () => window.removeEventListener(MOBILE_DRAWER_EVENT, handleDrawer);
+  }, []);
+
   return (
-    <div ref={ref} className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div
+      ref={ref}
+      className={`fixed right-6 flex flex-col items-end gap-3 transition-[bottom] duration-300 ${
+        drawerOpen ? "z-40" : "z-50"
+      } ${cookieBannerVisible ? "bottom-[210px] sm:bottom-[150px]" : "bottom-6"}`}
+    >
       <div
         className={`w-[320px] max-w-[calc(100vw-2rem)] origin-bottom-right overflow-hidden rounded-2xl bg-white shadow-2xl transition-all duration-200 ${
           open ? "scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"

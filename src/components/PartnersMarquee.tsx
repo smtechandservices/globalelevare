@@ -3,7 +3,7 @@ import { partners } from "@/lib/content";
 export default function PartnersMarquee() {
   return (
     <div className="border-y border-line bg-white py-10">
-      <div className="mx-auto max-w-[1320px] px-5 md:px-10">
+      <div className="mx-auto px-5 md:px-10">
         <div className="mb-5 text-center">
           <span className="eyebrow">Selected clients</span>
         </div>

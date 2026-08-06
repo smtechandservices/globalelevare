@@ -2,8 +2,8 @@ import { site, steps } from "@/lib/content";
 
 export default function Process() {
   return (
-    <div className="bg-[linear-gradient(180deg,#fff_0%,var(--color-bg-soft)_100%)] px-5 py-20 md:px-10 md:py-28">
-      <div className="mx-auto max-w-[1320px]">
+    <div className="bg-[linear-gradient(180deg,#fff_0%,var(--color-bg-soft)_100%)] px-5 pt-20 md:px-10 md:pt-28">
+      <div className="mx-auto">
         <div className="mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
             <span className="eyebrow mb-3 block">Sequence of works</span>

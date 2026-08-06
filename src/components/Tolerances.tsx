@@ -22,6 +22,12 @@ const icons = [
     <path d="M4 9h16" />
     <path d="M9 4v5" />
   </svg>,
+  <svg key="5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round">
+    <path d="M3 10l9-6 9 6" />
+    <path d="M4 10h16v9H4z" />
+    <path d="M9 13v3M12 13v3M15 13v3" />
+    <path d="M2 21h20" />
+  </svg>,
 ];
 
 export default function Tolerances() {
@@ -34,7 +40,7 @@ export default function Tolerances() {
       <div className="glow-blob -left-32 top-0 h-[420px] w-[420px] bg-accent/10" />
       <div className="glow-blob -right-32 bottom-0 h-[420px] w-[420px] bg-sky/15" />
 
-      <div className="relative mx-auto max-w-[1320px]">
+      <div className="relative mx-auto">
         <div className="mx-auto mb-12 max-w-[680px] text-center">
           <span className="eyebrow mb-3 block">Tolerances we hold</span>
           <h2 className="text-[28px] font-extrabold leading-[1.1] sm:text-[34px] lg:text-[44px]">
@@ -53,7 +59,7 @@ export default function Tolerances() {
               <span className="gradient-num pointer-events-none absolute top-5 right-6 text-[52px] font-extrabold opacity-20 transition-opacity duration-300 group-hover:opacity-40">
                 {w.n}
               </span>
-              <span className="mb-6 flex h-14 w-14 items-center justify-center rounded-t-[14px] bg-accent text-white shadow-[0_8px_20px_#c11f1f4d]">
+              <span className="mb-6 flex h-14 w-14 items-center justify-center rounded-t-[14px] bg-accent text-white shadow-[0_8px_20px_#4f7fe04d]">
                 {icons[i % icons.length]}
               </span>
               <h3 className="mb-2 text-[17px] font-bold text-navy">{w.title}</h3>

@@ -49,27 +49,27 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-[1320px] px-5 md:px-10">
+      <div className="relative z-10 mx-auto w-full px-5 md:px-10">
         <div className="max-w-[600px]">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-accent/25 px-4 py-1.5 text-[11px] uppercase tracking-[0.2em] text-white">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-bright opacity-75 [animation-duration:2.5s]" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent-bright" />
-            </span>
-            Rev. 2026 · UAE company formation · Est. 2011
-          </div>
-
           <h1
             className="mb-5 text-[clamp(36px,6.2vw,66px)] font-extrabold leading-[1.05] text-white"
             style={{ textShadow: "0 2px 24px rgba(0,0,0,0.35)" }}
           >
-            Elevare
+            Elevare Defining
             <br />
-            Defining <span className="text-accent-bright">Global Excellence.</span>
+            <span className="brand-gradient-text">Global Excellence.</span>
           </h1>
 
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-accent/25 px-4 py-1.5 text-[8px] md:text-[10px] uppercase tracking-[0.2em] text-white">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-bright opacity-75 [animation-duration:2.5s]" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent-bright" />
+            </span>
+            UAE company formation · Est. 2011
+          </div>
+
           <p className="mb-7 max-w-[50ch] text-[15.5px] leading-relaxed text-white/75">
-            Mainland, free zone or offshore — we spec the jurisdiction against your activity and
+            Mainland, free zone or offshore, we spec the jurisdiction against your activity and
             visa count, quote one fixed number, and file it ourselves. One advisor from first
             call through licence, visas and bank account.
           </p>

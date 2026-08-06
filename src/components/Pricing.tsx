@@ -4,7 +4,7 @@ import { packages, site } from "@/lib/content";
 export default function Pricing() {
   return (
     <div id="packages" className="bg-white px-5 py-20 md:px-10 md:py-28 scroll-mt-20">
-      <div className="mx-auto max-w-[1320px]">
+      <div className="mx-auto">
         <SectionHeading
           eyebrow="Specification & price"
           title="All-in packages, AED, first year"

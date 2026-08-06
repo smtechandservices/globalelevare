@@ -5,7 +5,7 @@ import { authorities, quotes } from "@/lib/content";
 export default function Testimonials() {
   return (
     <div className="bg-bg-soft px-5 py-20 md:px-10 md:py-28">
-      <div className="mx-auto max-w-[1320px]">
+      <div className="mx-auto">
         <SectionHeading eyebrow="On the record" title="Client sign-off" />
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">

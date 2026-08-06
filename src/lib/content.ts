@@ -237,6 +237,11 @@ export const why = [
     title: "We stay after the licence",
     body: "Renewal calendar, visa expiries, corporate tax deadlines tracked on our side and flagged before they cost you.",
   },
+  {
+    n: "06",
+    title: "Bank introductions, not just a referral",
+    body: "We prep your compliance file before the meeting and sit in on the call. Most clients bank within three weeks, not three months.",
+  },
 ];
 
 export const steps = [

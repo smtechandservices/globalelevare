@@ -4,7 +4,7 @@ import { posts } from "@/lib/content";
 export default function Resources() {
   return (
     <div id="resources" className="bg-white px-5 py-20 md:px-10 md:py-28 scroll-mt-20">
-      <div className="mx-auto max-w-[1320px]">
+      <div className="mx-auto">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
           <div>
             <span className="eyebrow mb-3 block">Insights</span>

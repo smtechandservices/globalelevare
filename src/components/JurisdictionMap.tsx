@@ -15,10 +15,10 @@ export default function JurisdictionMap() {
       className="relative isolate overflow-hidden px-5 py-20 md:px-10 md:py-28 scroll-mt-20"
       style={{
         background:
-          "radial-gradient(58% 80% at 10% 0, #c11f1f0d, transparent 60%), radial-gradient(55% 75% at 94% 4%, #3f7ea01a, transparent 60%), linear-gradient(#f6f9fd, #eaf1fa)",
+          "radial-gradient(58% 80% at 10% 0, #4f7fe00d, transparent 60%), radial-gradient(55% 75% at 94% 4%, #3f7ea01a, transparent 60%), linear-gradient(#f6f9fd, #eaf1fa)",
       }}
     >
-      <div className="relative mx-auto max-w-[1320px]">
+      <div className="relative mx-auto">
         <SectionHeading
           eyebrow="Site plan"
           title="Pick a jurisdiction"

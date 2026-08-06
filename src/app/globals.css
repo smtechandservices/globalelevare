@@ -9,12 +9,17 @@
   --color-navy-mid: #122b4f;
   --color-navy-soft: #1e3a66;
 
-  /* Accent / red family */
-  --color-accent: #c11f1f;
-  --color-accent-bright: #e54b4b;
-  --color-accent-deep: #a81e1e;
-  --color-accent-light: #ffe5e5;
-  --color-accent-pale: #fff5f5;
+  /* Accent — derived from the Elevare logo (violet -> blue -> teal, plus the arrow's gold) */
+  --color-accent: #4f7fe0;
+  --color-accent-bright: #6f97e8;
+  --color-accent-deep: #3e57c9;
+  --color-accent-light: #dbe6fb;
+  --color-accent-pale: #eef1ff;
+
+  --color-brand-violet: #7c5cef;
+  --color-brand-blue: #4f7fe0;
+  --color-brand-teal: #33c9d4;
+  --color-brand-gold: #ffce54;
 
   /* Sky / secondary blue family */
   --color-sky: #3f7ea0;
@@ -44,7 +49,7 @@
   --shadow-md: 0 8px 24px #0a254017;
   --shadow-lg: 0 16px 40px #0a25401f;
   --shadow-xl: 0 24px 64px #0a25402e;
-  --shadow-accent: 0 8px 24px #c11f1f47;
+  --shadow-accent: 0 8px 24px #4f7fe047;
 
   --r-sm: 6px;
   --r: 10px;
@@ -104,13 +109,13 @@
 }
 
 .btn-accent {
-  background: var(--color-accent);
+  background-image: linear-gradient(90deg, var(--color-brand-violet), var(--color-brand-blue) 55%, var(--color-brand-teal));
   color: #fff;
-  border-color: var(--color-accent);
+  border-color: transparent;
+  transition: filter 0.25s var(--ease), box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
 }
 .btn-accent:hover {
-  background: var(--color-accent-bright);
-  border-color: var(--color-accent-bright);
+  filter: brightness(0.92) saturate(1.1);
   box-shadow: var(--shadow-accent);
   transform: translateY(-1px);
 }
@@ -170,7 +175,7 @@
 }
 .glass-card-dark:hover {
   background: #0a254099;
-  border-color: #c11f1f73;
+  border-color: #4f7fe073;
   transform: translateY(-6px);
   box-shadow: inset 0 1px #fff3, 0 24px 56px #0006;
 }
@@ -183,9 +188,10 @@
   pointer-events: none;
 }
 
-/* Gradient-text numerals (navy -> accent) */
-.gradient-num {
-  background: linear-gradient(135deg, var(--color-navy), var(--color-accent) 130%);
+/* Gradient-text numerals and headline highlights, matching the logo's violet -> blue -> teal */
+.gradient-num,
+.brand-gradient-text {
+  background-image: linear-gradient(90deg, var(--color-brand-violet), var(--color-brand-blue) 55%, var(--color-brand-teal));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

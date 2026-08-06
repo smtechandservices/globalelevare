@@ -49,7 +49,7 @@ export default function Services() {
       <div className="glow-blob -left-40 -top-40 h-[500px] w-[500px] bg-accent/25" />
       <div className="glow-blob right-0 bottom-0 h-[420px] w-[420px] bg-sky/20" />
 
-      <div className="relative mx-auto max-w-[1320px]">
+      <div className="relative mx-auto">
         <SectionHeading
           eyebrow="Scope of work"
           title="Formation & compliance, handled end to end"
@@ -60,7 +60,7 @@ export default function Services() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((v, i) => (
             <div key={v.n} className="glass-card-dark group rounded-t-3xl p-8">
-              <span className="mb-7 flex h-14 w-14 items-center justify-center rounded-t-[14px] bg-accent text-white shadow-[0_8px_20px_#c11f1f59] transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105">
+              <span className="mb-7 flex h-14 w-14 items-center justify-center rounded-t-[14px] bg-accent text-white shadow-[0_8px_20px_#4f7fe059] transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105">
                 {icons[i % icons.length]}
               </span>
               <h3 className="mb-2.5 text-[20px] font-bold text-white">{v.title}</h3>

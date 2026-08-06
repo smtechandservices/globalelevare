@@ -3,7 +3,7 @@ import { stats } from "@/lib/content";
 export default function StatsBar() {
   return (
     <div className="bg-white px-5 py-16 md:px-10 md:py-20">
-      <div className="mx-auto grid max-w-[1320px] grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
+      <div className="mx-auto grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
         {stats.map((s) => (
           <div
             key={s.label}
