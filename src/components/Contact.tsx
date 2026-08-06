@@ -7,6 +7,7 @@ import { site } from "@/lib/content";
 export default function Contact() {
   const [name, setName] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
+  const [businessEmail, setBusinessEmail] = useState("");
   const [activity, setActivity] = useState("");
   const [visas, setVisas] = useState("");
   const [sent, setSent] = useState(false);
@@ -16,6 +17,7 @@ export default function Contact() {
     const lines = [
       `New quote request from ${name || "—"}`,
       `WhatsApp: ${whatsapp || "—"}`,
+      `Business email: ${businessEmail || "—"}`,
       `Activity: ${activity || "—"}`,
       `Visas needed: ${visas || "—"}`,
     ].join("\n");
@@ -104,6 +106,18 @@ export default function Contact() {
                 />
               </label>
             </div>
+            <label className="block">
+              <span className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.1em] text-accent">
+                Business email
+              </span>
+              <input
+                type="email"
+                value={businessEmail}
+                onChange={(e) => setBusinessEmail(e.target.value)}
+                placeholder="you@company.com"
+                className="w-full box-border rounded-[var(--r-sm)] border border-line bg-bg-soft px-3.5 py-3 text-[15px] text-navy outline-none transition-colors focus:border-accent focus:bg-white focus:shadow-[0_0_0_3px_#4f7fe01f]"
+              />
+            </label>
             <label className="block">
               <span className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.1em] text-accent">
                 Business activity
