@@ -2,20 +2,22 @@ import { stats } from "@/lib/content";
 
 export default function StatsBar() {
   return (
-    <div className="bg-dark px-8 text-[#f5f5f8] grid grid-cols-2 md:grid-cols-4">
-      {stats.map((s) => (
-        <div
-          key={s.label}
-          className="px-5 md:px-7 py-7 border-[#f5f5f8]/15 tabular-nums md:border-l md:first:border-l-0"
-        >
-          <div className="font-condensed font-semibold text-4xl md:text-[52px] leading-none text-dark-tint-1">
-            {s.n}
+    <div className="bg-white px-5 py-16 md:px-10 md:py-20">
+      <div className="mx-auto grid max-w-[1320px] grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
+        {stats.map((s) => (
+          <div
+            key={s.label}
+            className="flat-card rounded-t-2xl px-5 py-8 text-center md:px-6 md:py-9"
+          >
+            <div className="gradient-num text-[36px] font-extrabold leading-none md:text-[52px]">
+              {s.n}
+            </div>
+            <div className="mt-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-accent md:text-[12px]">
+              {s.label}
+            </div>
           </div>
-          <div className="text-xs tracking-[0.16em] uppercase text-dark-tint-2 mt-1.5">
-            {s.label}
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

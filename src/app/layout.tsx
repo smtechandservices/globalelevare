@@ -1,20 +1,14 @@
 import type { Metadata } from "next";
-import { Barlow, Barlow_Condensed } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import WhatsAppFloater from "@/components/WhatsAppFloater";
 import CookieConsent from "@/components/CookieConsent";
 import "./globals.css";
 
-const barlow = Barlow({
-  variable: "--font-barlow",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-const barlowCondensed = Barlow_Condensed({
-  variable: "--font-barlow-condensed",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const title = "Elevare Global | UAE Company Formation & Business Setup";
@@ -72,8 +66,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${barlow.variable} ${barlowCondensed.variable} h-full`}>
-      <body className="min-h-full flex flex-col bg-[#f2f2f3] text-[#1d1f20] font-sans antialiased">
+    <html lang="en" className={`${inter.variable} h-full`}>
+      <body className="min-h-full flex flex-col bg-white text-text font-sans antialiased">
         {children}
         <WhatsAppFloater />
         <CookieConsent />

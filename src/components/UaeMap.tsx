@@ -77,7 +77,7 @@ export default function UaeMap({
           <path d="M 20 0 L 0 0 0 20" fill="none" stroke="var(--color-accent)" strokeOpacity={0.08} strokeWidth={1} />
         </pattern>
         <pattern id={hatchId} width={7} height={7} patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-          <line x1={0} y1={0} x2={0} y2={7} stroke="var(--color-dark)" strokeOpacity={0.16} strokeWidth={1} />
+          <line x1={0} y1={0} x2={0} y2={7} stroke="var(--color-navy)" strokeOpacity={0.16} strokeWidth={1} />
         </pattern>
       </defs>
 
@@ -105,7 +105,7 @@ export default function UaeMap({
               fill={isSel ? undefined : `url(#${hatchId})`}
               className={[
                 "cursor-pointer outline-none transition-colors focus-visible:stroke-[2]",
-                isSel ? "fill-accent/45 stroke-dark/70" : "stroke-dark/25 hover:fill-accent/15",
+                isSel ? "fill-accent/45 stroke-navy/70" : "stroke-navy/25 hover:fill-accent/15",
               ].join(" ")}
               strokeWidth={isSel ? 1.1 : 0.75}
               strokeDasharray={isSel ? undefined : "3,2"}
@@ -117,7 +117,7 @@ export default function UaeMap({
       <path
         d={coastline}
         fill="none"
-        stroke="var(--color-dark)"
+        stroke="var(--color-navy)"
         strokeWidth={1.3}
         strokeLinejoin="round"
         pointerEvents="none"
@@ -125,15 +125,15 @@ export default function UaeMap({
 
       {cells.map((c) => (
         <g key={c.key} transform={`translate(${c.x.toFixed(2)}, ${c.y.toFixed(2)})`} className="pointer-events-none">
-          <line x1={-6} y1={0} x2={6} y2={0} stroke="var(--color-dark)" strokeOpacity={0.5} strokeWidth={0.6} />
-          <line x1={0} y1={-6} x2={0} y2={6} stroke="var(--color-dark)" strokeOpacity={0.5} strokeWidth={0.6} />
+          <line x1={-6} y1={0} x2={6} y2={0} stroke="var(--color-navy)" strokeOpacity={0.5} strokeWidth={0.6} />
+          <line x1={0} y1={-6} x2={0} y2={6} stroke="var(--color-navy)" strokeOpacity={0.5} strokeWidth={0.6} />
           <rect
             x={-9}
             y={-9}
             width={18}
             height={18}
-            className={c.key === selected ? "fill-dark" : "fill-accent"}
-            stroke="var(--color-dark)"
+            className={c.key === selected ? "fill-navy" : "fill-accent"}
+            stroke="var(--color-navy)"
             strokeWidth={0.6}
           />
           <text

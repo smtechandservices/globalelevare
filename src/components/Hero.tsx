@@ -1,57 +1,117 @@
 import Image from "next/image";
-import CornerMarks from "./CornerMarks";
 import { site } from "@/lib/content";
+
+const tools = [
+  {
+    title: "Compare jurisdictions",
+    tag: "7 emirates · 40+ zones",
+    href: "#jurisdictions",
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18" />
+        <path d="M12 3c2.5 2.6 4 6 4 9s-1.5 6.4-4 9c-2.5-2.6-4-6-4-9s1.5-6.4 4-9Z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Get a fixed quote",
+    tag: "Answer in one working hour",
+    href: "#consult",
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round">
+        <path d="M6 2h9l3 3v17H6z" />
+        <path d="M15 2v3h3" />
+        <path d="M9 13l2 2 4-4" />
+      </svg>
+    ),
+  },
+];
 
 export default function Hero() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 px-5 md:px-[60px] pt-10 md:pt-14 pb-8">
-      <div>
-        <div className="text-xs tracking-[0.24em] uppercase text-accent-strong tabular-nums mb-5">
-          Rev. 2026 · UAE company formation · Est. 2011
-        </div>
-        <h1 className="font-condensed font-semibold text-[56px] sm:text-[68px] lg:text-[82px] leading-[0.96] tracking-[-0.005em] uppercase mb-5">
-          Elevare
-          <br />
-          Defining
-          <span className="brand-gradient-text ms-4">Global Excellence.</span>
-        </h1>
-        <p className="max-w-[52ch] text-[#424244] mb-7">
-          Mainland, free zone or offshore — we spec the jurisdiction against your activity and visa
-          count, quote one fixed number, and file it ourselves. One advisor from first call through
-          licence, visas and bank account.
-        </p>
-        <div className="flex flex-wrap gap-3.5 items-center mb-7">
-          <a
-            href={site.waLink}
-            className="brand-gradient-btn relative text-[#f5f5f8] px-7 py-3.5 font-condensed text-lg tracking-[0.08em] uppercase"
+    <section className="relative isolate flex min-h-[560px] items-center overflow-hidden pt-[128px] pb-16 sm:min-h-[640px] md:pt-[150px] md:pb-20 lg:min-h-[780px] lg:pt-[170px] lg:pb-24">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/hero-meeting.jpg"
+          alt="Advisor and client reviewing paperwork"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(90deg, #051528d9 0%, #0a2540c2 22%, #0a254094 40%, #0a254040 58%, transparent 78% 100%), linear-gradient(to bottom, transparent 65%, #05152845 100%)",
+          }}
+        />
+      </div>
+
+      <div className="relative z-10 mx-auto w-full max-w-[1320px] px-5 md:px-10">
+        <div className="max-w-[600px]">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-accent/25 px-4 py-1.5 text-[11px] uppercase tracking-[0.2em] text-white">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-bright opacity-75 [animation-duration:2.5s]" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent-bright" />
+            </span>
+            Rev. 2026 · UAE company formation · Est. 2011
+          </div>
+
+          <h1
+            className="mb-5 text-[clamp(36px,6.2vw,66px)] font-extrabold leading-[1.05] text-white"
+            style={{ textShadow: "0 2px 24px rgba(0,0,0,0.35)" }}
           >
-            Contact an advisor
-          </a>
-          <a
-            href="#packages"
-            className="border border-accent text-accent-strong px-7 py-3.5 font-condensed text-lg tracking-[0.08em] uppercase transition-colors hover:bg-accent-tint"
-          >
-            See starting prices
-          </a>
+            Elevare
+            <br />
+            Defining <span className="text-accent-bright">Global Excellence.</span>
+          </h1>
+
+          <p className="mb-7 max-w-[50ch] text-[15.5px] leading-relaxed text-white/75">
+            Mainland, free zone or offshore — we spec the jurisdiction against your activity and
+            visa count, quote one fixed number, and file it ourselves. One advisor from first
+            call through licence, visas and bank account.
+          </p>
+
+          <div className="mb-8 flex flex-wrap items-center gap-3.5">
+            <a href={site.waLink} className="btn btn-accent">
+              Contact an advisor
+            </a>
+            <a href="#packages" className="btn btn-line-light">
+              See starting prices
+            </a>
+          </div>
+
+          <div className="hidden max-w-[520px] grid-cols-2 gap-3.5 md:grid">
+            {tools.map((t) => (
+              <a
+                key={t.title}
+                href={t.href}
+                className="group flex flex-col gap-3 rounded-t-xl border border-white/15 bg-white/8 p-4 backdrop-blur-sm transition-all duration-300 hover:bg-white/12"
+              >
+                <span className="flex h-10 w-10 items-center justify-center rounded-t-[10px] bg-accent text-white transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105">
+                  {t.icon}
+                </span>
+                <span>
+                  <span className="block text-[11px] uppercase tracking-[0.12em] text-white/60">{t.tag}</span>
+                  <span className="mt-0.5 flex items-center gap-1.5 text-[14.5px] font-semibold text-white">
+                    {t.title}
+                    <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  </span>
+                </span>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 
-      <div className="relative border border-accent p-1.5">
-        <div className="relative w-full min-h-[320px] lg:min-h-[440px] h-full flex items-end p-3.5">
-          <Image
-            src="/images/hero-meeting.jpg"
-            alt="Advisor and client reviewing paperwork"
-            fill
-            priority
-            sizes="(min-width: 1024px) 45vw, 100vw"
-            className="object-cover"
-          />
-          <span className="relative font-mono text-[11px] tracking-[0.06em] text-dark bg-[#f2f2f3] px-2 py-1">
-            advisor + client, Sharjah office
-          </span>
-        </div>
-        <CornerMarks inset={6} />
+      <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 text-white/60 lg:flex">
+        <span className="text-[10px] uppercase tracking-[0.25em]">Scroll</span>
+        <span className="relative h-10 w-px overflow-hidden bg-white/25">
+          <span className="absolute inset-x-0 top-0 h-2.5 animate-[scrollLine_2.4s_ease-in-out_infinite] bg-accent-bright" />
+        </span>
       </div>
-    </div>
+    </section>
   );
 }

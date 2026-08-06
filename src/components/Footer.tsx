@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SocialLinks from "./SocialLinks";
 import { emirates, resourceLinks, serviceLinks } from "@/lib/content";
 
@@ -5,75 +6,84 @@ const currentYear = 2026;
 
 export default function Footer() {
   return (
-    <footer className="bg-dark text-[#f5f5f8] px-5 md:px-[60px] pt-10 pb-5">
-      <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-7 pb-7 border-b border-[#f5f5f8]/18">
-        <div>
-          <div className="font-condensed font-semibold text-2xl md:text-[32px] tracking-[0.06em] uppercase">
-            Elevare Global
+    <footer className="bg-bg-soft px-5 pt-10 md:px-10">
+      <div className="relative mx-auto max-w-[1320px] overflow-hidden rounded-tr-[64px] px-7 pt-14 sm:rounded-tr-[80px] md:px-12 md:pt-16">
+        <div
+          className="absolute inset-0 -z-10"
+          style={{
+            background: "linear-gradient(160deg, var(--color-navy-deep), var(--color-navy) 50%, var(--color-navy-mid))",
+          }}
+        />
+        <div className="glow-blob -right-24 -top-24 h-[420px] w-[420px] bg-accent/20" />
+
+        <div className="relative grid grid-cols-1 gap-10 pb-14 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          <div>
+            <div className="text-2xl font-extrabold text-white md:text-[28px]">Elevare Global</div>
+            <div className="mt-1 text-[13px] uppercase tracking-[0.14em] text-accent-bright">
+              Defining Global Excellence
+            </div>
+            <p className="mt-4 max-w-[36ch] text-[13.5px] leading-relaxed text-white/70">
+              Business setup and corporate services, Sharjah, serving founders in 45 countries
+              since 2011.
+            </p>
+            <div className="mt-5">
+              <SocialLinks variant="dark" />
+            </div>
           </div>
-          <div className="text-[13px] tracking-[0.1em] uppercase text-dark-tint-2 mt-1">
-            Defining Global Excellence
+          <div>
+            <div className="mb-5 text-[12px] font-bold uppercase tracking-[0.14em] text-accent-bright">
+              Services
+            </div>
+            <div className="flex flex-col gap-2.5 text-[14.5px] text-white/85">
+              {serviceLinks.map((s) => (
+                <a key={s.title} href={s.href} className="transition-colors hover:text-white">
+                  {s.title}
+                </a>
+              ))}
+            </div>
           </div>
-          <p className="mt-3.5 text-sm text-dark-tint-3 max-w-[36ch]">
-            Business setup and corporate services, Sharjah, serving founders in 45 countries
-            since 2011.
-          </p>
-          <div className="mt-3.5">
-            <SocialLinks variant="dark" />
+          <div>
+            <div className="mb-5 text-[12px] font-bold uppercase tracking-[0.14em] text-accent-bright">
+              Free Zones
+            </div>
+            <div className="flex flex-col gap-2.5 text-[14.5px] text-white/85">
+              {emirates.map((em) => (
+                <a key={em.key} href="#jurisdictions" className="transition-colors hover:text-white">
+                  {em.name}
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-        <div>
-          <div className="text-[11px] tracking-[0.24em] uppercase text-dark-tint-2 mb-2.5">
-            Services
-          </div>
-          <div className="flex flex-col gap-1.5 text-sm text-dark-tint-4">
-            {serviceLinks.map((s) => (
-              <a key={s.title} href={s.href} className="transition-colors hover:text-brand-teal">
-                {s.title}
+          <div>
+            <div className="mb-5 text-[12px] font-bold uppercase tracking-[0.14em] text-accent-bright">
+              Company
+            </div>
+            <div className="flex flex-col gap-2.5 text-[14.5px] text-white/85">
+              <a href="#about" className="transition-colors hover:text-white">
+                About
               </a>
-            ))}
-          </div>
-        </div>
-        <div>
-          <div className="text-[11px] tracking-[0.24em] uppercase text-dark-tint-2 mb-2.5">
-            Free Zones
-          </div>
-          <div className="flex flex-col gap-1.5 text-sm text-dark-tint-4">
-            {emirates.map((em) => (
-              <a key={em.key} href="#jurisdictions" className="transition-colors hover:text-brand-teal">
-                {em.name}
+              {resourceLinks.map((r) => (
+                <a key={r.title} href={r.href} className="transition-colors hover:text-white">
+                  {r.title}
+                </a>
+              ))}
+              <a href="#consult" className="transition-colors hover:text-white">
+                Contact
               </a>
-            ))}
+              <Link href="/" className="transition-colors hover:text-white">
+                Terms
+              </Link>
+            </div>
           </div>
         </div>
-        <div>
-          <div className="text-[11px] tracking-[0.24em] uppercase text-dark-tint-2 mb-2.5">
-            Company
-          </div>
-          <div className="flex flex-col gap-1.5 text-sm text-dark-tint-4">
-            <a href="#about" className="transition-colors hover:text-brand-teal">
-              About
-            </a>
-            {resourceLinks.map((r) => (
-              <a key={r.title} href={r.href} className="transition-colors hover:text-brand-teal">
-                {r.title}
-              </a>
-            ))}
-            <a href="#consult" className="transition-colors hover:text-brand-teal">
-              Contact
-            </a>
-            <a href="/" className="transition-colors hover:text-brand-teal">
-              Terms
-            </a>
-          </div>
+
+        <div className="relative flex flex-col justify-between gap-3 border-t border-white/15 py-6 text-[11.5px] text-white/50 sm:flex-row">
+          <span>
+            © {currentYear} Elevare Global · Business Setup Services · Sharjah Economic
+            Development Dept.
+          </span>
+          <span>Prices are indicative and exclude government fee changes · Privacy · Terms</span>
         </div>
-      </div>
-      <div className="flex flex-col sm:flex-row justify-between gap-3 pt-3.5 text-[11px] text-dark-tint-2 tabular-nums">
-        <span>
-          © {currentYear} Elevare Global · Business Setup Services · Sharjah Economic
-          Development Dept.
-        </span>
-        <span>Prices are indicative and exclude government fee changes · Privacy · Terms</span>
       </div>
     </footer>
   );

@@ -1,18 +1,31 @@
 export default function SectionHeading({
+  eyebrow,
   title,
-  sheet,
+  intro,
+  align = "left",
+  light = false,
 }: {
+  eyebrow: string;
   title: string;
-  sheet: string;
+  intro?: string;
+  align?: "left" | "center";
+  light?: boolean;
 }) {
   return (
-    <div className="flex items-baseline justify-between gap-4 border-b border-[#1d1f20]/15 pb-3.5 mb-7 flex-wrap">
-      <h2 className="font-condensed font-semibold text-4xl md:text-[46px] uppercase leading-none m-0">
+    <div className={`max-w-[760px] mb-10 md:mb-14 ${align === "center" ? "mx-auto text-center" : ""}`}>
+      <span className="eyebrow mb-3 block">{eyebrow}</span>
+      <h2
+        className={`text-[28px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.1] ${
+          light ? "text-white" : ""
+        }`}
+      >
         {title}
       </h2>
-      <span className="text-xs tracking-[0.16em] uppercase text-[#7a7a7d] whitespace-nowrap">
-        {sheet}
-      </span>
+      {intro && (
+        <p className={`mt-4 text-[15px] leading-relaxed ${light ? "text-white/70" : "text-text-muted"}`}>
+          {intro}
+        </p>
+      )}
     </div>
   );
 }

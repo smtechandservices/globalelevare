@@ -1,47 +1,52 @@
-import CornerMarks from "./CornerMarks";
 import SectionHeading from "./SectionHeading";
 import { packages, site } from "@/lib/content";
 
 export default function Pricing() {
   return (
-    <div id="packages" className="px-5 md:px-[60px] pt-12 pb-14 scroll-mt-20">
-      <SectionHeading title="Specification & price" sheet="All-in, AED, first year" />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        {packages.map((k) => (
-          <div
-            key={k.tier}
-            className={[
-              "relative p-5 border",
-              k.highlight ? "border-accent bg-accent-tint" : "border-[#1d1f20]/15",
-            ].join(" ")}
-          >
-            <div className="flex justify-between items-baseline">
-              <div className="text-xs tracking-[0.24em] uppercase text-accent-strong">{k.tier}</div>
-              {k.flag && (
-                <div className="text-[11px] tracking-[0.16em] uppercase text-brand-gold-text font-semibold">{k.flag}</div>
-              )}
-            </div>
-            <div className="text-[11px] tracking-[0.2em] uppercase text-[#7a7a7d] mt-4 -mb-3 ms-1">Starting from</div>
-            <div className="font-condensed font-semibold text-5xl leading-tight mt-1 mb-1 tabular-nums">
-              {k.price}
-            </div>
-            <div className="text-sm text-[#7a7a7d] mb-3.5">{k.zone}</div>
-            <div className="flex flex-col gap-1.5 border-t border-[#1d1f20]/15 pt-3.5">
-              {k.lines.map((l) => (
-                <div key={l} className="text-[15px] text-[#424244]">
-                  — {l}
-                </div>
-              ))}
-            </div>
-            <a
-              href={site.waLink}
-              className="brand-gradient-btn block text-center mt-5 text-[#f5f5f8] px-3.5 py-2.5 font-condensed text-lg tracking-[0.08em] uppercase"
+    <div id="packages" className="bg-white px-5 py-20 md:px-10 md:py-28 scroll-mt-20">
+      <div className="mx-auto max-w-[1320px]">
+        <SectionHeading
+          eyebrow="Specification & price"
+          title="All-in packages, AED, first year"
+        />
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {packages.map((k) => (
+            <div
+              key={k.tier}
+              className={[
+                "relative flex flex-col rounded-t-3xl p-7",
+                k.highlight ? "border-2 border-accent bg-accent-pale shadow-xl" : "flat-card",
+              ].join(" ")}
             >
-              Get this quote
-            </a>
-            <CornerMarks />
-          </div>
-        ))}
+              <div className="flex items-baseline justify-between">
+                <span className="eyebrow">{k.tier}</span>
+                {k.flag && (
+                  <span className="rounded-full bg-accent px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.06em] text-white">
+                    {k.flag}
+                  </span>
+                )}
+              </div>
+              <div className="mt-5 text-[11px] uppercase tracking-[0.16em] text-text-muted">
+                Starting from
+              </div>
+              <div className="mb-1 text-[42px] font-extrabold leading-tight text-navy">
+                {k.price}
+              </div>
+              <div className="mb-5 text-[14px] text-text-muted">{k.zone}</div>
+              <div className="flex flex-1 flex-col gap-2 border-t border-line pt-4">
+                {k.lines.map((l) => (
+                  <div key={l} className="flex items-start gap-2 text-[14.5px] text-text">
+                    <span className="mt-0.5 text-accent">✓</span>
+                    {l}
+                  </div>
+                ))}
+              </div>
+              <a href={site.waLink} className="btn btn-accent mt-6 w-full">
+                Get this quote
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -355,6 +355,33 @@ export const posts = [
   },
 ];
 
+export const faqs = [
+  {
+    q: "Mainland or free zone — which one actually fits me?",
+    a: "Mainland lets you trade anywhere in the UAE and bid on government contracts, with no cap on visas but a higher setup cost. A free zone is cheaper to start and fully foreign-owned by default, but usually restricts you to trading within the zone or internationally unless you add a mainland branch. We match this against your activity and visa count on the free call, before you commit to either.",
+  },
+  {
+    q: "How long does a licence actually take to issue?",
+    a: "Most free zones issue in 3–5 working days once your documents are complete. Mainland licences and anything needing external approvals (health, education, engineering) run longer — we tell you the honest range for your activity up front, not the marketing number.",
+  },
+  {
+    q: "What's included in the fixed quote, and what isn't?",
+    a: "The quote itemises government fee, zone fee and our service fee separately, for the licence you've chosen. It excludes visa costs (quoted per visa, since headcount varies) and any government fee changes announced after your quote date — we flag those the moment they're published.",
+  },
+  {
+    q: "Can I open a corporate bank account before I have a licence?",
+    a: "No — UAE banks require an issued trade licence, MOA and establishment card before they'll open a corporate account. We start the introduction process as soon as your licence is issued, and prepare the compliance documents banks ask for in parallel with the filing so the account isn't the bottleneck.",
+  },
+  {
+    q: "What happens after the licence is issued — do you disappear?",
+    a: "No. We track your renewal date, visa expiries and corporate tax deadlines from our side and flag them before they become a problem. A lapsed establishment card or a missed 9% corporate tax registration is the most common way a young company gets fined in year two.",
+  },
+  {
+    q: "Do I need to be in the UAE in person to set up a company?",
+    a: "For most free zones, no — the process can be completed remotely with digitally signed documents, and we escort the visa/Emirates ID steps once you arrive. Some mainland activities and account-opening interviews still require in-person attendance, which we'll flag at the jurisdiction-planning stage.",
+  },
+];
+
 export const nav = [
   { label: "Services", href: "#services" },
   { label: "Free Zones", href: "#jurisdictions" },

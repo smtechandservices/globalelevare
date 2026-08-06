@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Saved reference copy of a competitor's site (not part of the app).
+    "Avyanco _ Business Setup & Corporate Advisory in Dubai, UAE_files/**",
   ]),
 ]);
 

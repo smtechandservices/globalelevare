@@ -45,8 +45,8 @@ export default function SocialLinks({ variant = "light" }: { variant?: "light" |
           aria-label={s.name}
           className={
             variant === "dark"
-              ? "flex items-center justify-center w-9 h-9 border border-[#f5f5f8]/20 text-[#f5f5f8] transition-colors hover:border-brand-teal hover:text-brand-teal"
-              : "flex items-center justify-center w-9 h-9 border border-[#1d1f20]/15 text-[#1d1f20] transition-colors hover:border-accent hover:text-accent-strong"
+              ? "flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/8 text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent"
+              : "flex h-11 w-11 items-center justify-center rounded-full border border-line bg-bg-soft text-navy transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent hover:text-white"
           }
         >
           <SocialIcon name={s.icon} />
