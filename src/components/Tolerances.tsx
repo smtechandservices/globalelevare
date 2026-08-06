@@ -1,3 +1,4 @@
+import FadeIn from "./FadeIn";
 import { why } from "@/lib/content";
 
 const icons = [
@@ -55,16 +56,18 @@ export default function Tolerances() {
 
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {why.map((w, i) => (
-            <div key={w.n} className="glass-card-light group relative overflow-hidden rounded-t-3xl p-7">
-              <span className="gradient-num pointer-events-none absolute top-5 right-6 text-[52px] font-extrabold opacity-20 transition-opacity duration-300 group-hover:opacity-40">
-                {w.n}
-              </span>
-              <span className="mb-6 flex h-14 w-14 items-center justify-center rounded-t-[14px] bg-accent text-white shadow-[0_8px_20px_#4f7fe04d]">
-                {icons[i % icons.length]}
-              </span>
-              <h3 className="mb-2 text-[17px] font-bold text-navy">{w.title}</h3>
-              <p className="text-[13.5px] leading-relaxed text-text-muted">{w.body}</p>
-            </div>
+            <FadeIn key={w.n} delay={(i % 3) * 100}>
+              <div className="glass-card-light group relative overflow-hidden rounded-t-3xl p-7">
+                <span className="gradient-num pointer-events-none absolute top-5 right-6 text-[52px] font-extrabold opacity-20 transition-opacity duration-300 group-hover:opacity-40">
+                  {w.n}
+                </span>
+                <span className="mb-6 flex h-14 w-14 items-center justify-center rounded-t-[14px] bg-accent text-white shadow-[0_8px_20px_#4f7fe04d]">
+                  {icons[i % icons.length]}
+                </span>
+                <h3 className="mb-2 text-[17px] font-bold text-navy">{w.title}</h3>
+                <p className="text-[13.5px] leading-relaxed text-text-muted">{w.body}</p>
+              </div>
+            </FadeIn>
           ))}
         </div>
       </div>

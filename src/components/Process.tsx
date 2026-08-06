@@ -1,3 +1,4 @@
+import FadeIn from "./FadeIn";
 import { site, steps } from "@/lib/content";
 
 export default function Process() {
@@ -12,24 +13,21 @@ export default function Process() {
             </h2>
           </div>
           <p className="max-w-[38ch] text-[14.5px] leading-relaxed text-text-muted">
-            Five stages, each with an honest timeline — including the ones that run slower than
+            Five stages, each with an honest timeline including the ones that run slower than
             we&apos;d like to admit.
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5 lg:gap-0">
           {steps.map((p, i) => (
-            <div key={p.n} className="group relative flex lg:pr-5">
+            <FadeIn key={p.n} delay={i * 100} className="group relative flex lg:pr-5">
               <div className="flat-card w-full rounded-t-2xl border-t-[3px] border-t-accent p-6">
                 <div className="mb-4 flex items-center justify-between">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-t-[10px] bg-[linear-gradient(135deg,var(--color-navy),var(--color-navy-mid))] text-white transition-all duration-300 group-hover:-rotate-3 group-hover:bg-[linear-gradient(135deg,var(--color-accent),var(--color-accent-deep))]">
-                    {i + 1}
-                  </span>
+                  <div className="gradient-num mb-2 text-[42px] font-bold leading-none">{p.n}</div>
                   <span className="rounded-full bg-accent-pale px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.06em] text-accent">
                     {p.when}
                   </span>
                 </div>
-                <div className="gradient-num mb-2 text-[42px] font-bold leading-none">{p.n}</div>
                 <h3 className="mb-1.5 text-[13.5px] font-bold uppercase tracking-[0.1em] text-navy">
                   {p.title}
                 </h3>
@@ -40,7 +38,7 @@ export default function Process() {
                   →
                 </div>
               )}
-            </div>
+            </FadeIn>
           ))}
         </div>
 

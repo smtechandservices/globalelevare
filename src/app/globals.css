@@ -149,10 +149,10 @@
   box-shadow: var(--shadow-sm);
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), background 0.3s var(--ease);
 }
-.flat-card:hover {
+/* .flat-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
-}
+} */
 
 .glass-card-light {
   background: #ffffffb3;
@@ -224,8 +224,34 @@
   animation-play-state: paused;
 }
 
+.animate-marquee-slow {
+  animation: marquee 70s linear infinite;
+}
+
+.animate-marquee-slow:hover {
+  animation-play-state: paused;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.fade-in-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee {
+  .animate-marquee,
+  .animate-marquee-slow {
     animation: none;
+  }
+
+  .fade-in-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

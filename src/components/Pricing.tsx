@@ -9,13 +9,15 @@ export default function Pricing() {
           eyebrow="Specification & price"
           title="All-in packages, AED, first year"
         />
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:items-center">
           {packages.map((k) => (
             <div
               key={k.tier}
               className={[
-                "relative flex flex-col rounded-t-3xl p-7",
-                k.highlight ? "border-2 border-accent bg-accent-pale shadow-xl" : "flat-card",
+                "relative flex flex-col rounded-t-3xl p-7 transition-transform duration-300",
+                k.highlight
+                  ? "z-10 border-2 border-accent bg-accent-pale shadow-xl md:scale-105 hover:scale-108"
+                  : "flat-card hover:scale-102",
               ].join(" ")}
             >
               <div className="flex items-baseline justify-between">
