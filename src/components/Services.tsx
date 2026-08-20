@@ -71,9 +71,9 @@ export default function Services() {
                   <span className="text-[13px] font-semibold uppercase tracking-[0.06em] text-white/90">
                     {v.price}
                   </span>
-                  <span className="text-accent-bright transition-transform duration-300 group-hover:translate-x-1">
+                  {/* <span className="text-accent-bright transition-transform duration-300 group-hover:translate-x-1">
                     →
-                  </span>
+                  </span> */}
                 </div>
               </div>
             </FadeIn>

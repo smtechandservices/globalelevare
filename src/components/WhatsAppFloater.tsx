@@ -46,13 +46,13 @@ export default function WhatsAppFloater() {
   return (
     <div
       ref={ref}
-      className={`fixed right-6 flex flex-col items-end gap-3 transition-[bottom] duration-300 ${
+      className={`pointer-events-none fixed right-6 flex flex-col items-end gap-3 transition-[bottom] duration-300 ${
         drawerOpen ? "z-40" : "z-50"
       } ${cookieBannerVisible ? "bottom-[210px] sm:bottom-[150px]" : "bottom-6"}`}
     >
       <div
         className={`w-[320px] max-w-[calc(100vw-2rem)] origin-bottom-right overflow-hidden rounded-2xl bg-white shadow-2xl transition-all duration-200 ${
-          open ? "scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"
+          open ? "pointer-events-auto scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"
         }`}
       >
         <div className="flex items-center gap-3 bg-[linear-gradient(135deg,#128c7e,#25d366)] px-4 py-3.5">
@@ -91,7 +91,7 @@ export default function WhatsAppFloater() {
         aria-expanded={open}
         aria-label={open ? "Close chat" : `Chat with us on WhatsApp: ${site.whatsappDisplay}`}
         onClick={() => setOpen((v) => !v)}
-        className="group relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25d366] shadow-lg shadow-black/20 transition-transform hover:scale-105 focus-visible:scale-105 outline-none"
+        className="pointer-events-auto group relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25d366] shadow-lg shadow-black/20 transition-transform hover:scale-105 focus-visible:scale-105 outline-none"
       >
         {!open && (
           <span className="absolute inset-0 rounded-full bg-[#25d366] opacity-60 animate-ping [animation-duration:2.5s]" />

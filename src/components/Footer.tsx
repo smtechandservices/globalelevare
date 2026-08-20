@@ -1,6 +1,5 @@
-import Link from "next/link";
 import SocialLinks from "./SocialLinks";
-import { emirates, resourceLinks, serviceLinks } from "@/lib/content";
+import { companyLinks, emirates, serviceLinks } from "@/lib/content";
 
 const currentYear = 2026;
 
@@ -48,7 +47,7 @@ export default function Footer() {
             </div>
             <div className="flex flex-col gap-2.5 text-[14.5px] text-white/85">
               {emirates.map((em) => (
-                <a key={em.key} href="#jurisdictions" className="transition-colors hover:text-white">
+                <a key={em.key} href="/#jurisdictions" className="transition-colors hover:text-white">
                   {em.name}
                 </a>
               ))}
@@ -59,20 +58,11 @@ export default function Footer() {
               Company
             </div>
             <div className="flex flex-col gap-2.5 text-[14.5px] text-white/85">
-              <a href="#about" className="transition-colors hover:text-white">
-                About
-              </a>
-              {resourceLinks.map((r) => (
-                <a key={r.title} href={r.href} className="transition-colors hover:text-white">
-                  {r.title}
+              {companyLinks.map((c) => (
+                <a key={c.title} href={c.href} className="transition-colors hover:text-white">
+                  {c.title}
                 </a>
               ))}
-              <a href="#consult" className="transition-colors hover:text-white">
-                Contact
-              </a>
-              <Link href="/" className="transition-colors hover:text-white">
-                Terms
-              </Link>
             </div>
           </div>
         </div>
@@ -82,8 +72,15 @@ export default function Footer() {
             © {currentYear} Elevare Global · Business Setup Services · Sharjah Economic
             Development Dept.
           </span>
-          <span>Prices are indicative and exclude government fee changes · Privacy · Terms</span>
+          <span>Prices are indicative and exclude government fee changes</span>
         </div>
+
+        <p className="relative border-t border-white/10 py-5 text-[11px] leading-relaxed text-white/40 text-center sm:text-left">
+          By using this website you agree to our terms of service: quoted fees, timelines and
+          government charges are indicative, subject to change without prior notice, and do not
+          constitute legal or financial advice. Engagement with Elevare Global is governed by the
+          signed service agreement issued at the time of onboarding.
+        </p>
       </div>
     </footer>
   );

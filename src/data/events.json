@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "corporate-tax-filing-deadlines",
+    "category": "Webinar",
+    "title": "UAE corporate tax filing deadlines and what to do if you miss them in 2026",
+    "description": "A working session on Qualifying Free Zone Person status, filing windows and the documents the FTA actually asks for at review.",
+    "date": "2026-09-09",
+    "time": "4:00 PM GST",
+    "location": "Online",
+    "attendees": 160
+  },
+  {
+    "slug": "mainland-vs-freezone-qa",
+    "category": "Workshop",
+    "title": "Mainland vs free zone: live Q&A for first-time founders",
+    "description": "Bring your activity and visa count. We'll cost out mainland and free zone side by side on screen and take questions for the full hour.",
+    "date": "2026-09-24",
+    "time": "5:00 PM GST",
+    "location": "Online",
+    "attendees": 195
+  },
+  {
+    "slug": "sharjah-founders-meetup",
+    "category": "In-person",
+    "title": "Sharjah founders meetup banking & compliance clinic",
+    "description": "Bring your compliance file for a free review before your next bank meeting. Coffee, and twenty minutes one-on-one with an advisor.",
+    "date": "2026-10-08",
+    "time": "6:30 PM GST",
+    "location": "Elevare Global office, Sharjah",
+    "attendees": 48
+  },
+  {
+    "slug": "bank-account-documents-2026",
+    "category": "Webinar",
+    "title": "Opening a UAE corporate bank account in 2026: documents that actually get approved",
+    "description": "Why source-of-funds narratives get rejected, what UBO declarations banks actually check, and how to prep a file before the first call.",
+    "date": "2026-10-22",
+    "time": "4:00 PM GST",
+    "location": "Online",
+    "attendees": 150
+  },
+  {
+    "slug": "q2-corporate-tax-filing-debrief",
+    "category": "Webinar",
+    "title": "Q2 corporate tax filing debrief: what tripped up free-zone companies",
+    "description": "A recap of the most common FTA rejections this filing season, and the fixes that got them cleared on resubmission.",
+    "date": "2026-07-16",
+    "time": "4:00 PM GST",
+    "location": "Online",
+    "attendees": 180
+  },
+  {
+    "slug": "freezone-vs-mainland-cost-workshop",
+    "category": "Workshop",
+    "title": "Free zone vs mainland: a real cost comparison workshop",
+    "description": "Line-by-line setup and renewal costs across five zones and mainland Dubai, worked out live against attendee activities.",
+    "date": "2026-05-14",
+    "time": "5:00 PM GST",
+    "location": "Online",
+    "attendees": 210
+  },
+  {
+    "slug": "sharjah-bank-account-clinic-q1",
+    "category": "In-person",
+    "title": "Sharjah founders meetup: bank account clinic",
+    "description": "One-on-one compliance file reviews before attendees' next bank meeting, over coffee at the Elevare office.",
+    "date": "2026-06-25",
+    "time": "6:30 PM GST",
+    "location": "Sharjah",
+    "attendees": 42
+  },
+  {
+    "slug": "investor-visa-renewal-webinar",
+    "category": "Webinar",
+    "title": "Investor visa renewals: what changed for 2026 dependents",
+    "description": "A walkthrough of the updated medical, biometrics and Emirates ID steps, and the renewal timeline mistakes that cost founders a fine.",
+    "date": "2026-04-09",
+    "time": "4:00 PM GST",
+    "location": "Online",
+    "attendees": 134
+  }
+]

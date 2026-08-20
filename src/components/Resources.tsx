@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { posts } from "@/lib/content";
+import { latestBlogPosts } from "@/lib/content";
 
 export default function Resources() {
   return (
@@ -12,16 +12,16 @@ export default function Resources() {
               Technical notes
             </h2>
           </div>
-          <a href="#" className="text-[13px] font-semibold uppercase tracking-[0.06em] text-accent hover:text-navy">
+          <a href="/blogs" className="text-[13px] font-semibold uppercase tracking-[0.06em] text-accent hover:text-navy">
             All resources →
           </a>
         </div>
 
         <div className="flex gap-5 overflow-x-auto pb-2 [scrollbar-width:none] sm:grid sm:grid-cols-2 sm:overflow-visible sm:pb-0 lg:grid-cols-3">
-          {posts.map((b) => (
+          {latestBlogPosts.map((b) => (
             <a
-              key={b.title}
-              href="#"
+              key={b.slug}
+              href="/blogs"
               className="flat-card group block shrink-0 basis-[85%] overflow-hidden rounded-t-2xl sm:basis-auto"
             >
               <div className="relative aspect-[16/10] overflow-hidden bg-bg-soft">
@@ -35,7 +35,7 @@ export default function Resources() {
               </div>
               <div className="p-5">
                 <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-accent">
-                  {b.meta}
+                  {b.category} · {b.readTime}
                 </div>
                 <h3 className="text-[18px] font-bold leading-snug text-navy">{b.title}</h3>
               </div>

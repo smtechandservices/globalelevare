@@ -232,6 +232,14 @@
   animation-play-state: paused;
 }
 
+.animate-marquee-slow-reverse {
+  animation: marquee 20s linear infinite reverse;
+}
+
+.animate-marquee-slow-reverse:hover {
+  animation-play-state: paused;
+}
+
 .fade-in-up {
   opacity: 0;
   transform: translateY(28px);
@@ -245,7 +253,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee,
-  .animate-marquee-slow {
+  .animate-marquee-slow,
+  .animate-marquee-slow-reverse {
     animation: none;
   }
 

@@ -103,15 +103,6 @@ function ServiceIcon({ name }: { name: string }) {
           <path d="M7 13h3v3H7z" />
         </svg>
       );
-    case "careers":
-      return (
-        <svg {...common}>
-          <rect x="3" y="7" width="18" height="13" rx="1" />
-          <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-          <path d="M3 12h18" />
-          <path d="M10 12v1.5h4V12" />
-        </svg>
-      );
     default:
       return null;
   }
@@ -183,7 +174,7 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex h-[76px] items-center gap-4 px-5 md:h-[80px] md:px-10">
-        <Link href="/" className="relative h-12 w-[145px] shrink-0 md:h-14 md:w-[152px]">
+        <a href="/" className="relative h-12 w-[145px] shrink-0 md:h-14 md:w-[152px]">
           <Image
             src="/images/logo.webp"
             alt="Elevare Global"
@@ -203,7 +194,7 @@ export default function Header() {
               scrolled ? "opacity-100" : "opacity-0"
             }`}
           />
-        </Link>
+        </a>
 
         <nav ref={navRef} className="hidden mt-2 flex-1 items-center justify-center gap-8 text-[14.5px] font-medium xl:flex">
           {nav.map((item) =>

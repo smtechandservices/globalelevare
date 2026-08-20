@@ -8,6 +8,7 @@ import JurisdictionMap from "@/components/JurisdictionMap";
 import Tolerances from "@/components/Tolerances";
 import Pricing from "@/components/Pricing";
 import Resources from "@/components/Resources";
+import EventsMarquee from "@/components/EventsMarquee";
 import Testimonials from "@/components/Testimonials";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
@@ -27,6 +28,7 @@ export default function Home() {
         <Tolerances />
         <Pricing />
         <Resources />
+        <EventsMarquee />
         <Testimonials />
         <Faq />
         <Contact />

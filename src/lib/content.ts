@@ -1,3 +1,6 @@
+import blogsData from "@/data/blogs.json";
+import eventsData from "@/data/events.json";
+
 export const site = {
   name: "Elevare Global",
   tagline: "Defining Global Excellence",
@@ -342,23 +345,34 @@ export const quotes = [
 
 export const authorities = ["SEDD Sharjah", "Dubai DET", "IFZA", "RAKEZ", "DMCC", "GDRFA"];
 
-export const posts = [
-  {
-    meta: "Tax · 6 min read",
-    title: "UAE corporate tax at 9%: what a free-zone company actually pays",
-    image: "/images/resource-tax.jpg",
-  },
-  {
-    meta: "Formation · 8 min read",
-    title: "Mainland or free zone in 2026: the ownership rules moved again",
-    image: "/images/resource-formation.jpg",
-  },
-  {
-    meta: "Banking · 5 min read",
-    title: "What UAE bank compliance really asks a new company for",
-    image: "/images/resource-banking.jpg",
-  },
-];
+export type BlogPost = {
+  slug: string;
+  category: "Tax" | "Formation" | "Banking" | "Visas" | "Compliance" | "PRO";
+  readTime: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  date: string;
+};
+
+export const blogPosts: BlogPost[] = blogsData as BlogPost[];
+
+export const latestBlogPosts: BlogPost[] = [...blogPosts]
+  .sort((a, b) => (a.date < b.date ? 1 : -1))
+  .slice(0, 3);
+
+export type EventItem = {
+  slug: string;
+  category: "Webinar" | "Workshop" | "In-person";
+  title: string;
+  description: string;
+  date: string;
+  time: string;
+  location: string;
+  attendees?: number;
+};
+
+export const events: EventItem[] = eventsData as EventItem[];
 
 export const faqs = [
   {
@@ -388,24 +402,30 @@ export const faqs = [
 ];
 
 export const nav = [
-  { label: "Services", href: "#services" },
-  { label: "Free Zones", href: "#jurisdictions" },
-  { label: "About", href: "#about" },
-  { label: "Resources", href: "#resources" },
-  { label: "Contact", href: "#consult" },
+  { label: "Services", href: "/#services" },
+  { label: "Free Zones", href: "/#jurisdictions" },
+  { label: "About", href: "/#about" },
+  { label: "Resources", href: "/#resources" },
+  { label: "Contact", href: "/#consult" },
 ];
 
 export const serviceLinks: { title: string; tag: string; icon: string; href: string }[] = [
-  { title: "Mainland Formation", tag: "Direct local trade access", icon: "mainland", href: "#services" },
-  { title: "Free Zone Setup", tag: "100% tax benefits", icon: "freezone", href: "#services" },
-  { title: "Offshore Incorporation", tag: "Asset protection", icon: "offshore", href: "#services" },
-  { title: "Visa & PRO Services", tag: "Residency solutions", icon: "visa", href: "#services" },
-  { title: "License & Permits", tag: "Compliance & renewals", icon: "license", href: "#services" },
-  { title: "Corporate Banking", tag: "Financial infrastructure", icon: "banking", href: "#services" },
+  { title: "Mainland Formation", tag: "Direct local trade access", icon: "mainland", href: "/#services" },
+  { title: "Free Zone Setup", tag: "100% tax benefits", icon: "freezone", href: "/#services" },
+  { title: "Offshore Incorporation", tag: "Asset protection", icon: "offshore", href: "/#services" },
+  { title: "Visa & PRO Services", tag: "Residency solutions", icon: "visa", href: "/#services" },
+  { title: "License & Permits", tag: "Compliance & renewals", icon: "license", href: "/#services" },
+  { title: "Corporate Banking", tag: "Financial infrastructure", icon: "banking", href: "/#services" },
 ];
 
 export const resourceLinks: { title: string; tag: string; icon: string; href: string }[] = [
-  { title: "Blogs", tag: "Technical notes & guides", icon: "blog", href: "#resources" },
-  { title: "Events", tag: "Webinars & workshops", icon: "events", href: "#resources" },
-  { title: "Careers", tag: "Join the team", icon: "careers", href: "#resources" },
+  { title: "Blogs", tag: "Technical notes & guides", icon: "blog", href: "/blogs" },
+  { title: "Events", tag: "Webinars & workshops", icon: "events", href: "/blogs#events" },
+];
+
+export const companyLinks: { title: string; href: string }[] = [
+  { title: "About", href: "/#about" },
+  { title: "Blogs", href: "/blogs" },
+  { title: "Events", href: "/blogs#events" },
+  { title: "Contact", href: "/#consult" },
 ];
