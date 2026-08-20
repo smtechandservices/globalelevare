@@ -17,7 +17,7 @@ const tools = [
   {
     title: "Get a fixed quote",
     tag: "Answer in one working hour",
-    href: "#consult",
+    href: "/#consult",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round">
         <path d="M6 2h9l3 3v17H6z" />

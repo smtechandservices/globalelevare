@@ -368,7 +368,7 @@ export default function Header() {
           )}
         </nav>
 
-        <a href="#consult" className="btn btn-accent hidden xl:inline-flex min-h-[42px]! py-2! text-[14px]">
+        <a href="/#consult" className="btn btn-accent hidden xl:inline-flex min-h-[42px]! py-2! text-[14px]">
           Free Consultation
         </a>
 
@@ -552,7 +552,7 @@ export default function Header() {
             )}
           </nav>
           <div className="border-t border-line p-5">
-            <a href="#consult" onClick={closeMobile} className="btn btn-accent w-full">
+            <a href="/#consult" onClick={closeMobile} className="btn btn-accent w-full">
               Free Consultation
             </a>
             <a href={site.telLink} className="mt-3 block text-center text-[13px] text-text-muted">
