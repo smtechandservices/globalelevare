@@ -6,10 +6,12 @@ export const site = {
   tagline: "Defining Global Excellence",
   whatsapp: "+971555039188",
   whatsappDisplay: "+971 55 503 9188",
+  phone: "+971569542696",
+  phoneDisplay: "+971 56 954 2696",
   email: "info@globalelevare.com",
   office: "Sharjah, UAE",
   waLink: "https://wa.me/971555039188",
-  telLink: "tel:+971555039188",
+  telLink: "tel:+971569542696",
   mailLink: "mailto:info@globalelevare.com",
 };
 

@@ -60,14 +60,14 @@ export default function Services() {
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((v, i) => (
-            <FadeIn key={v.n} delay={(i % 3) * 100}>
-              <div className="glass-card-dark group rounded-t-3xl p-8">
+            <FadeIn key={v.n} delay={(i % 3) * 100} className="h-full">
+              <div className="glass-card-dark group flex h-full flex-col rounded-t-3xl p-8">
                 <span className="mb-7 flex h-14 w-14 items-center justify-center rounded-t-[14px] bg-accent text-white shadow-[0_8px_20px_#4f7fe059] transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105">
                   {icons[i % icons.length]}
                 </span>
                 <h3 className="mb-2.5 text-[20px] font-bold text-white">{v.title}</h3>
                 <p className="mb-5 text-[14.5px] leading-relaxed text-white/70">{v.body}</p>
-                <div className="flex items-center justify-between border-t border-white/15 pt-4">
+                <div className="mt-auto flex items-center justify-between border-t border-white/15 pt-4">
                   <span className="text-[13px] font-semibold uppercase tracking-[0.06em] text-white/90">
                     {v.price}
                   </span>

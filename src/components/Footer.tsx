@@ -1,5 +1,5 @@
 import SocialLinks from "./SocialLinks";
-import { companyLinks, emirates, serviceLinks } from "@/lib/content";
+import { companyLinks, emirates, serviceLinks, site } from "@/lib/content";
 
 const currentYear = 2026;
 
@@ -25,6 +25,14 @@ export default function Footer() {
               Business setup and corporate services, Sharjah, serving founders in 45 countries
               since 2011.
             </p>
+            <div className="mt-5 flex flex-col gap-1.5 text-[13.5px] text-white/85">
+              <a href={site.telLink} className="transition-colors hover:text-white">
+                {site.phoneDisplay}
+              </a>
+              <a href={site.mailLink} className="transition-colors hover:text-white">
+                {site.email}
+              </a>
+            </div>
             <div className="mt-5">
               <SocialLinks variant="dark" />
             </div>

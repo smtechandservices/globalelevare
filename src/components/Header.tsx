@@ -375,7 +375,7 @@ export default function Header() {
         <div className="xl:hidden ml-auto flex items-center gap-1">
           <a
             href={site.telLink}
-            aria-label={`Call us: ${site.whatsappDisplay}`}
+            aria-label={`Call us: ${site.phoneDisplay}`}
             className={`pl-5 flex h-10 w-10 items-center justify-center rounded-full transition-colors ${linkTone}`}
           >
             <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.7} strokeLinecap="round" strokeLinejoin="round">
@@ -556,7 +556,7 @@ export default function Header() {
               Free Consultation
             </a>
             <a href={site.telLink} className="mt-3 block text-center text-[13px] text-text-muted">
-              or call {site.whatsappDisplay}
+              or call {site.phoneDisplay}
             </a>
           </div>
         </div>

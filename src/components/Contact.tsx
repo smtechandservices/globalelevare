@@ -57,7 +57,7 @@ export default function Contact() {
               <IconChip><PhoneIcon /></IconChip>
               <span>
                 <span className="block text-[11px] uppercase tracking-[0.12em] text-text-muted">Call</span>
-                <span className="text-[15px] font-semibold">{site.whatsappDisplay}</span>
+                <span className="text-[15px] font-semibold">{site.phoneDisplay}</span>
               </span>
             </a>
             <a href={site.mailLink} className="flex items-center gap-3 text-navy transition-colors hover:text-accent">
