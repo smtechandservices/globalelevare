@@ -183,13 +183,13 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex h-[76px] items-center gap-4 px-5 md:h-[80px] md:px-10">
-        <Link href="/" className="relative h-12 w-[155px] shrink-0 md:h-10 md:w-[118px]">
+        <Link href="/" className="relative h-12 w-[145px] shrink-0 md:h-14 md:w-[152px]">
           <Image
             src="/images/logo.webp"
             alt="Elevare Global"
             fill
             priority
-            className={`object-contain object-left transition-opacity duration-300 ${
+            className={`object-cover object-left transition-opacity duration-300 ${
               scrolled ? "opacity-0" : "opacity-100"
             }`}
             style={{ filter: "brightness(0) invert(1)" }}
@@ -199,7 +199,7 @@ export default function Header() {
             alt="Elevare Global"
             fill
             priority
-            className={`object-contain object-left transition-opacity duration-300 ${
+            className={`object-cover object-left transition-opacity duration-300 ${
               scrolled ? "opacity-100" : "opacity-0"
             }`}
           />
@@ -377,7 +377,7 @@ export default function Header() {
           )}
         </nav>
 
-        <a href="#consult" className="btn btn-accent hidden xl:inline-flex min-h-[42px]! py-2! text-[13px]">
+        <a href="#consult" className="btn btn-accent hidden xl:inline-flex min-h-[42px]! py-2! text-[14px]">
           Free Consultation
         </a>
 

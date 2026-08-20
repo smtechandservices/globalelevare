@@ -30,10 +30,10 @@ const tools = [
 
 export default function Hero() {
   return (
-    <section className="relative isolate flex min-h-[560px] items-center overflow-hidden pt-[128px] pb-16 sm:min-h-[640px] md:pt-[150px] md:pb-20 lg:min-h-[780px] lg:pt-[170px] lg:pb-24">
+    <section className="relative isolate flex min-h-[560px] items-center overflow-hidden pt-[128px] sm:min-h-[640px] md:pt-[150px] lg:min-h-[810px] lg:pt-[170px]">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-meeting.jpg"
+          src="/images/hero-meeting.png"
           alt="Advisor and client reviewing paperwork"
           fill
           priority
@@ -44,7 +44,7 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(90deg, #051528d9 0%, #0a2540c2 22%, #0a254094 40%, #0a254040 58%, transparent 78% 100%), linear-gradient(to bottom, transparent 65%, #05152845 100%)",
+              "linear-gradient(90deg, #051528d9 0%, #0a2540c2 22%, #0a25407a 40%, #0a254040 58%, transparent 78% 100%), linear-gradient(to bottom, transparent 65%, #05152845 100%)",
           }}
         />
       </div>
@@ -74,7 +74,7 @@ export default function Hero() {
             call through licence, visas and bank account.
           </p>
 
-          <div className="mb-8 flex flex-wrap items-center gap-3.5">
+          <div className="mb-4 flex flex-wrap items-center gap-3.5">
             <a href={site.waLink} className="btn btn-accent">
               Contact an advisor
             </a>
@@ -83,7 +83,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="hidden max-w-[520px] grid-cols-2 gap-3.5 md:grid">
+          <div className="hidden max-w-[520px] grid-cols-2 gap-3.5 md:grid" style={{transform: "translateY(60px)"}}>
             {tools.map((t) => (
               <a
                 key={t.title}
