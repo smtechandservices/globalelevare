@@ -26,7 +26,7 @@ export const services = [
   {
     n: "01",
     title: "Mainland formation",
-    body: "Trade anywhere in the UAE, invoice government entities, no visa cap. 100% foreign ownership on most activities.",
+    body: "Trade anywhere in the UAE, invoice government entities. 100% foreign ownership on most activities.",
     price: "From AED 14,500",
   },
   {
@@ -56,7 +56,7 @@ export const services = [
   {
     n: "06",
     title: "Banking, tax & books",
-    body: "Corporate account introductions, bookkeeping, VAT and 9% corporate tax registration and filing.",
+    body: "Corporate account introductions, bookkeeping, VAT, corporate tax registration and filing. We prep the file, sit in the call, and follow up.",
     price: "From AED 950 / mo",
   },
 ];
