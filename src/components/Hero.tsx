@@ -40,13 +40,8 @@ export default function Hero() {
           sizes="100vw"
           className="object-cover"
         />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(90deg, #051528d9 0%, #0a2540c2 22%, #0a25407a 40%, #0a254040 58%, transparent 78% 100%), linear-gradient(to bottom, transparent 65%, #05152845 100%)",
-          }}
-        />
+        <div className="absolute inset-0 bg-[linear-gradient(165deg,#051528e6_0%,#0a2540cc_28%,#0a254099_52%,#0515285c_78%,#0515283d_100%)] md:bg-[linear-gradient(90deg,#051528d9_0%,#0a2540c2_22%,#0a25407a_40%,#0a254040_58%,transparent_78%,transparent_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_65%,#05152845_100%)]" />
       </div>
 
       <div className="relative z-10 mx-auto w-full px-5 md:px-10">

@@ -41,16 +41,19 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3 border-t border-line pt-8">
-          <span className="eyebrow mr-2">Registered with</span>
-          {authorities.map((a) => (
-            <span
-              key={a}
-              className="rounded-full border border-line bg-white px-3.5 py-1.5 text-[12px] font-semibold text-text-muted"
-            >
-              {a}
-            </span>
-          ))}
+        <div className="mt-10 border-t border-line pt-8 pb-4">
+          <span className="eyebrow ml-1">Registered with</span>
+          <br/><br/>
+          <div className="flex flex-wrap items-center gap-3.5">
+            {authorities.map((a) => (
+              <span
+                key={a}
+                className="rounded-full border border-line bg-white px-3.5 py-1.5 text-[12px] font-semibold text-text-muted"
+              >
+                {a}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </div>
